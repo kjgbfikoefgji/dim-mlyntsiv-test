@@ -539,7 +539,14 @@
 
     /* Керування живе всередині композиції, а не під нею: окремим рядком
        унизу воно читалось як чужий елемент, а під карткою лишалась
-       порожнеча. Тепер це нижній край самої сцени. */
+       порожнеча. Тепер це нижній край самої сцени.
+
+       Воно позиціюється абсолютно, тож місце під нього картка мусить
+       резервувати сама — це `padding-bottom`. На десктопі там 104px, а на
+       телефоні довго стояло 30px, і ряд стрілок лягав просто на ціну:
+       перетин 44px, рівно висота кружка. Видно було тільки на телефоні —
+       власник прислав запис екрана. Якщо міняєш нижній відступ картки,
+       перевір, що він більший за 34px відступу нижче плюс 44px висоти. */
     .menu-nav{position:absolute;left:52px;right:52px;bottom:34px;z-index:4;
       display:flex;align-items:center;gap:12px;pointer-events:none}
     .menu-nav>*{pointer-events:auto}
@@ -730,7 +737,7 @@
     .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:13px}
     .footer-inner strong{color:#fff}
     .image-fallback{background:linear-gradient(130deg,var(--caramel),var(--ink))!important}
-    @media(max-width:850px){.hero{min-height:auto}.nav{display:none}.menu-toggle{display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:50%;background:rgba(255,255,255,.25);color:#fff;font-size:20px}.order-link{display:none}.hero-grid{min-height:auto;padding:42px 0 52px;grid-template-columns:1fr;grid-template-areas:"copy" "product" "card";gap:30px}.hero-copy{padding:0;text-align:center}.hero-copy p{margin-inline:auto}.hours{justify-content:center;margin-top:26px}.product{width:min(82vw,430px);margin:auto}.flavor-panel{justify-self:center;width:min(100%,360px);padding:17px;display:grid;grid-template-columns:110px 1fr;column-gap:17px;align-items:center}.flavor-image{grid-row:span 4;aspect-ratio:1}.tag{margin:0;width:max-content}.flavor-panel h2{font-size:27px}.price-row{margin-top:8px;padding-top:8px}.hero-foot{flex-direction:column;align-items:stretch;gap:14px}.hero-foot .dish-nav{justify-content:center}.menu-card--reel{grid-template-columns:1fr;gap:26px;padding:30px 24px;min-height:calc(100svh - 120px)}.menu-card--reel .menu-card__body{order:2;max-width:none}.menu-card--reel p{max-width:none}.menu-card__plate{order:1;width:min(72vw,300px);justify-self:center;margin-right:0}.menu-filter{top:70px}.about-grid,.contact-grid{grid-template-columns:1fr;gap:32px}.about-photo{min-height:320px}section:not(.hero){padding:70px 0}}
+    @media(max-width:850px){.hero{min-height:auto}.nav{display:none}.menu-toggle{display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:50%;background:rgba(255,255,255,.25);color:#fff;font-size:20px}.order-link{display:none}.hero-grid{min-height:auto;padding:42px 0 52px;grid-template-columns:1fr;grid-template-areas:"copy" "product" "card";gap:30px}.hero-copy{padding:0;text-align:center}.hero-copy p{margin-inline:auto}.hours{justify-content:center;margin-top:26px}.product{width:min(82vw,430px);margin:auto}.flavor-panel{justify-self:center;width:min(100%,360px);padding:17px;display:grid;grid-template-columns:110px 1fr;column-gap:17px;align-items:center}.flavor-image{grid-row:span 4;aspect-ratio:1}.tag{margin:0;width:max-content}.flavor-panel h2{font-size:27px}.price-row{margin-top:8px;padding-top:8px}.hero-foot{flex-direction:column;align-items:stretch;gap:14px}.hero-foot .dish-nav{justify-content:center}.menu-card--reel{grid-template-columns:1fr;gap:26px;padding:30px 24px 104px;min-height:calc(100svh - 120px)}.menu-nav{left:24px;right:24px}.menu-card--reel .menu-card__body{order:2;max-width:none}.menu-card--reel p{max-width:none}.menu-card__plate{order:1;width:min(72vw,300px);justify-self:center;margin-right:0}.menu-filter{top:70px}.about-grid,.contact-grid{grid-template-columns:1fr;gap:32px}.about-photo{min-height:320px}section:not(.hero){padding:70px 0}}
     @media(max-width:520px){.container{width:min(100% - 28px,1160px)}.brand{font-size:20px}.brand-mark{width:34px;height:34px}.hero-grid{padding-top:32px}.hero-copy h1{font-size:4.8rem}.orb{width:60px;margin:-30px 0 0 -30px}.about-photo{min-height:260px}.contact-box{padding:23px}.footer-inner{align-items:flex-start;flex-direction:column}.flavor-panel{width:100%}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.primary{transition:none}}
     /* Явний фокус: свій колір для темних поверхонь, інакше кільце зникає. */

@@ -291,6 +291,47 @@ OVERLAP = """() => {
   return hits;
 }"""
 
+# Те саме для сцени меню. Окрема перевірка, бо ряд керування позиціюється
+# абсолютно, а місце під нього резервує картка своїм padding-bottom — і ці
+# двоє легко розходяться. На телефоні так і сталося: стрілки лягли просто
+# на ціну, перетин 44px. На десктопі все було чисто, тож жодне число цього
+# не показало — баг знайшовся лише на записі екрана з телефона.
+MENU_OVERLAP = """() => {
+  const card = [...document.querySelectorAll('.menu-card--reel')]
+    .find(c => c.getBoundingClientRect().width > 100
+            && getComputedStyle(c).opacity !== '0');
+  if (!card) return [];
+  const names = [
+    ['.menu-card__price', 'ціна', card],
+    ['.plus', 'кнопка «Додати»', card],
+    ['h3', 'назва страви', card],
+    ['.addons', 'добавки', card],
+    ['.menu-nav', 'ряд керування', document],
+  ];
+  const boxes = [];
+  for (const [sel, name, root] of names) {
+    const el = root.querySelector(sel);
+    if (!el) continue;
+    const cs = getComputedStyle(el);
+    if (cs.display === 'none' || cs.visibility === 'hidden') continue;
+    const r = el.getBoundingClientRect();
+    if (!r.width || !r.height) continue;
+    boxes.push({name, el, r});
+  }
+  const hits = [];
+  for (let i = 0; i < boxes.length; i++)
+    for (let j = i + 1; j < boxes.length; j++) {
+      if (boxes[i].el.contains(boxes[j].el) || boxes[j].el.contains(boxes[i].el))
+        continue;
+      const a = boxes[i].r, b = boxes[j].r;
+      const w = Math.min(a.right, b.right) - Math.max(a.left, b.left);
+      const h = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
+      if (w > 4 && h > 4)
+        hits.push(`${boxes[i].name} × ${boxes[j].name} (${Math.round(w)}×${Math.round(h)}px)`);
+    }
+  return hits;
+}"""
+
 # Бокс блока завжди дорівнює його колонці, тож переповнення гліфами через
 # getBoundingClientRect не видно — саме тому заголовок непомітно заліз на
 # тарілку. Реальну ширину рядків дає Range по вмісту.
@@ -560,6 +601,21 @@ def audit(page, label: str, problems: list[str]) -> None:
             print(f'      {hit}')
     else:
         print('  [ok ] блоки героя не накладаються')
+
+    # Сцену меню перевіряємо окремо: панель треба відкрити, а після —
+    # повернутись на головну, щоб решта перевірок бачила той самий стан.
+    page.evaluate('location.hash = "#menu"')
+    page.wait_for_timeout(900)
+    hits = page.evaluate(MENU_OVERLAP)
+    if hits:
+        problems.append(f'{label}: накладання в сцені меню')
+        print('  [ПРОБЛЕМА] блоки в сцені меню накладаються:')
+        for hit in hits:
+            print(f'      {hit}')
+    else:
+        print('  [ok ] блоки сцени меню не накладаються')
+    page.evaluate('location.hash = "#home"')
+    page.wait_for_timeout(700)
 
     over = page.evaluate(TEXT_OVERFLOW)
     if over:
