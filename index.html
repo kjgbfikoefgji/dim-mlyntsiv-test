@@ -1,0 +1,2246 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#9E5C42" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17110C" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Дім Млинців в Ужгороді — млинці, панкейки та запашна кава.">
+  <title>Дім Млинців — Ужгород</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
+  <!-- Картка для месенджерів і соцмереж. og:image і og:url мають стати
+       абсолютними (https://домен/og.png), щойно буде відомий домен —
+       відносний шлях розуміють не всі збирачі. Тоді ж додати canonical. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:site_name" content="Дім Млинців">
+  <meta property="og:title" content="Дім Млинців — кав'ярня в Ужгороді">
+  <meta property="og:description" content="Млинці, панкейки та запашна кава. вул. Івана Франка, 56.">
+  <meta property="og:image" content="og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Розмітка локального бізнесу. Тільки те, що є на сторінці: адреса,
+       графік і Instagram. Телефон і координати не вигадуємо — їх немає. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Дім Млинців",
+    "description": "Млинці, панкейки та запашна кава в центрі Ужгорода.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "вул. Івана Франка, 56",
+      "addressLocality": "Ужгород",
+      "addressCountry": "UA"
+    },
+    "servesCuisine": ["Млинці", "Панкейки", "Кава"],
+    "priceRange": "65–185 ₴",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00", "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday","Sunday"],
+        "opens": "10:00", "closes": "17:00"
+      }
+    ],
+    "sameAs": ["https://www.instagram.com/dim.mlynciv/"]
+  }
+  </script>
+  <!-- Тему ставимо до першого малювання, інакше сторінка встигає блимнути
+       системною й лише потім перемкнутись на збережену. -->
+  <script>
+    try{
+      var t = localStorage.getItem('dm-theme');
+      if(t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    }catch(e){}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <!-- Playfair Display замість DM Serif Display: у DM немає кириличної
+       підмножини взагалі (тільки latin і latin-ext), тому всі українські
+       заголовки малював системний serif — різний на кожній ОС. -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:light dark;--font-display:'Cormorant Garamond',Georgia,'Times New Roman',serif;--surface:light-dark(#FDF6F1,#1A1210);--surface-2:light-dark(#FFFBF9,#251A16);--surface-3:light-dark(#F5E6DC,#201613);--text:light-dark(#2E1D14,#F8ECE4);--text-soft:light-dark(#6B4E41,#C9B2A6);--hairline:light-dark(rgba(46,29,20,.14),rgba(248,236,228,.16));--brand:#9E5C42;--brand-deep:#7C4530;--gold:#E8A53E;--gold-deep:#D08A22;--ink:#2A1F16;--on-ink:#FFFAF3;--hero-ink:#FFF3E8;--hero-ink-soft:rgba(255,243,232,.88);--caramel:#C98A3A;--shadow:0 18px 38px light-dark(rgba(42,31,22,.14),rgba(0,0,0,.5));--r:28px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--surface);color:var(--text);font:500 16px/1.55 Onest,system-ui,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.container{width:min(1320px,calc(100% - 48px));margin:auto}
+    .hero{background:linear-gradient(145deg,var(--hero-a),var(--hero-b));min-height:720px;padding:calc(18px + env(safe-area-inset-top)) 0 30px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:650px;height:650px;left:50%;top:50%;translate:-50% -38%;border-radius:50%;background:radial-gradient(circle,rgba(255,243,232,.20),transparent 66%);pointer-events:none}.header{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;min-height:44px;gap:9px;font:600 24px/1 var(--font-display);color:var(--hero-ink)}.brand-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:rgba(255,243,232,.16);border:1px solid rgba(255,243,232,.42);font:800 14px Onest}.nav{position:relative;display:flex;gap:4px;padding:5px;border-radius:999px;background:rgba(42,31,22,.20);border:1px solid rgba(255,243,232,.26);backdrop-filter:blur(12px)}
+    /* Індикатор їде між пунктами замість того, щоб перефарбовуватись:
+       око стежить за одним об'єктом, а не за двома спалахами. */
+    .nav-pill{position:absolute;top:5px;bottom:5px;left:0;width:0;z-index:0;
+      border-radius:999px;background:rgba(255,243,232,.94);opacity:0;
+      transition:translate .34s cubic-bezier(.4,0,.2,1),width .34s cubic-bezier(.4,0,.2,1),opacity .2s ease}.nav a{position:relative;z-index:1;display:flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;color:var(--hero-ink);font-size:13px;font-weight:700;transition:background .2s ease}.nav a:hover{background:rgba(255,243,232,.18)}
+    .nav a.active,.nav a.active:hover{background:transparent;color:var(--ink)}.order-link{padding:13px 18px;border:1px solid rgba(255,243,232,.44);border-radius:999px;background:transparent;color:var(--hero-ink);font-size:13px;font-weight:700;transition:background .2s ease}
+    .order-link:hover{background:rgba(255,243,232,.14)}
+    /* Перемикач теми живе в шапці героя, тому чорнило тут стале — під ним
+       завжди золото. Іконки міняє JS через data-state. */
+    .theme-toggle{display:grid;place-items:center;width:44px;height:44px;flex:none;
+      border:1px solid rgba(255,243,232,.44);border-radius:50%;background:transparent;
+      color:var(--hero-ink);transition:background .2s ease}
+    .theme-toggle:hover{background:rgba(255,243,232,.14)}
+    .theme-toggle svg{width:19px;height:19px;display:none}
+    .theme-toggle[data-state="auto"] .i-auto,
+    .theme-toggle[data-state="light"] .i-light,
+    .theme-toggle[data-state="dark"] .i-dark{display:block}
+    /* Тарілка росте з висотою вікна. Стала ширина 480px лишала 167px
+       порожнього золота зверху на великому екрані й водночас налазила
+       на стрілки при 720px. */
+        .hero-grid{position:relative;z-index:1;min-height:min(620px,72svh);display:grid;grid-template-columns:minmax(260px,1fr) minmax(300px,min(50%,clamp(340px,62svh,700px))) minmax(260px,1fr);grid-template-areas:"copy product card";align-items:center;gap:42px}.hero-copy{grid-area:copy;padding:50px 0;container-type:inline-size}.eyebrow{font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--text)}.hero .eyebrow{color:var(--hero-ink)}h1{margin:13px 0 20px;font:italic 400 clamp(2.9rem,31cqw,7.6rem)/.75 var(--font-display);letter-spacing:-.03em;color:var(--hero-ink)}.outline{color:transparent;-webkit-text-stroke:1.6px var(--hero-ink)}.hero-copy p{max-width:290px;margin:0 0 30px;color:var(--hero-ink-soft);font-size:16px;text-wrap:pretty}.primary{display:inline-flex;align-items:center;gap:14px;padding:5px 6px 5px 22px;border:0;border-radius:999px;background:#fff;color:var(--ink);font-weight:900;white-space:nowrap;box-shadow:0 7px 18px rgba(42,31,22,.14);transition:transform .18s}.primary:hover{transform:translateY(-2px)}.primary b{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:var(--hero-b);color:var(--hero-ink);font-size:22px;transition:background .78s cubic-bezier(.4,0,.2,1)}.hours{display:flex;gap:10px;align-items:center;margin-top:58px;font-size:13px;color:var(--hero-ink)}.hours svg{flex:0 0 20px}.hours small{display:block;color:var(--hero-ink-soft);font-size:11px;letter-spacing:.08em;text-transform:uppercase}.hours strong{font-weight:900}
+    .hours.is-closed small{opacity:.75}
+    .product{grid-area:product;position:relative;width:100%;aspect-ratio:1;display:grid;place-items:center}.plate{width:90%;aspect-ratio:1;padding:13px;border-radius:50%;background:#fff;box-shadow:0 28px 45px rgba(82,44,4,.26),0 8px 14px rgba(42,31,22,.18)}.plate img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;background:linear-gradient(135deg,var(--caramel),var(--ink))}.plate:after{content:"";position:absolute;inset:9% 9%;border:1px solid rgba(201,138,58,.5);border-radius:50%;pointer-events:none}.orb{position:absolute;width:76px;margin:-38px 0 0 -38px;aspect-ratio:1;border:4px solid #fff;border-radius:50%;background:#fff;box-shadow:0 12px 20px rgba(42,31,22,.18);overflow:hidden}
+    /* Кільце малює бордюр, а не підкладка під знімком: обрізка йде по
+       внутрішньому колу, тож кадр може бути більшим за кружок і гойдатись,
+       не відкриваючи білого. Запас 12 px з кожного боку — більший за хід
+       дрейфу (9 px), тому кільце лишається рівним у будь-який момент. */
+    .orb img{width:calc(100% + 24px);height:calc(100% + 24px);margin:-12px;object-fit:cover;background:var(--caramel)}/* Три точки через 120° на краю тарілки. Розмір однаковий, нахил
+       однаковий за модулем — рівність замість «на око». */
+    /* Рівно 120°: точки на колі радіусом 50% при кутах -150°, -30°, 90°.
+       Раніше стояли числа «на око» (7.6 / 92.4 / 48.3 при 23.5%), і проміжки
+       виходили 116° / 124° / 120° — око це ловило, лінійка ні. */
+    .orb-one{left:6.70%;top:25%}.orb-two{left:93.30%;top:25%}.orb-three{left:50%;top:100%}
+    .orb-one{rotate:-10deg}.orb-two{rotate:10deg}.orb-three{rotate:-4deg}
+    .flavor-panel{position:relative;grid-area:card;align-self:center;justify-self:end;width:min(100%,280px);padding:25px;border-radius:var(--r);color:var(--ink);background:rgba(255,250,243,.8);border:1px solid rgba(255,255,255,.8);box-shadow:var(--shadow);backdrop-filter:blur(12px)}.flavor-image{width:100%;aspect-ratio:1.15;display:block;object-fit:cover;border-radius:19px;background:var(--caramel)}.tag{display:inline-block;margin-top:15px;padding:5px 9px;border-radius:999px;background:rgba(232,165,62,.22);color:#6B3E02;font-size:11px;font-weight:800}.flavor-panel h2{margin:8px 0 4px;font:400 31px/1 var(--font-display);letter-spacing:-.04em}.flavor-panel p{margin:0;color:#5C4A3A;font-size:13px}.price-row{display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:16px;border-top:1px solid rgba(42,31,22,.13);font-weight:900}.price-row strong{font-size:18px}.arrow{width:44px;height:44px;border:0;border-radius:50%;background:var(--hero-ink);color:var(--hero-b);font-size:19px;transition:background .2s ease,color .78s cubic-bezier(.4,0,.2,1),transform .2s ease}
+    .arrow:hover{background:#fff;transform:scale(1.08)}/* Керування слайдером однією групою: «назад», «далі» й лічильник поруч.
+    Раніше «далі» жила в картці справа, «назад» — окремим кружком унизу,
+    і на мобільному обидві були недосяжні. */
+    .dish-nav{display:flex;align-items:center;gap:10px}
+    .hero-counter{margin:0 0 0 6px;font-size:12px;letter-spacing:.11em;font-weight:800;color:var(--hero-ink)}.hero-counter b{color:var(--hero-ink)}
+    /* Секції. Голі елементні селектори (footer, section, h1) тут були міною:
+       footer{background:#1d140f} чіплявся і до <footer> усередині картки
+       меню, кладучи на кожну картку темну плиту підвалу сайту. */
+    section:not(.hero){padding:92px 0}
+    .section-head{max-width:600px}
+    .section-head h2{margin:7px 0 11px;font:400 clamp(2.7rem,5vw,4.2rem)/.95 var(--font-display);letter-spacing:-.055em}
+    .section-head p{margin:0;color:var(--text-soft)}
+
+    .menu-section{background:transparent}
+
+    /* Категорії. Підзаголовок секції давно обіцяв «солодке, солоне та кава» —
+       тепер це не лише опис, а й спосіб дійти до потрібного. */
+    .menu-filter{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+    .chip{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;
+      border:1px solid var(--hairline);border-radius:999px;background:transparent;
+      color:var(--text);font-size:13px;font-weight:800;
+      transition:background .2s ease,border-color .2s ease,color .2s ease}
+    .chip:hover{background:rgba(42,31,22,.07)}
+    .chip.is-on{background:var(--brand);border-color:var(--brand);color:var(--hero-ink)}
+    /* Скільки страв у категорії. Число рахує JS із самої розмітки — як у
+       «Про нас»: те, що рахується, не може застаріти й почати брехати. */
+    .chip b{margin-left:9px;padding:2px 8px;border-radius:999px;
+      background:rgba(42,31,22,.09);color:var(--text-soft);
+      font-size:11px;font-weight:900;font-variant-numeric:tabular-nums}
+    /* На увімкненому чипсі підкладка ЗАТЕМНЮЄ, а не висвітлює: світла
+       поверх глини давала кремовому числу 3.06:1 при 11 px, тобто нижче
+       порогу 4.5. Заміряно на композиції, а не на око. */
+    .chip.is-on b{background:rgba(42,31,22,.24);color:var(--hero-ink)}
+    /* Рядок «5 страв у категорії» лишається для тих, хто не бачить екрана:
+       очима те саме число тепер видно просто на чипсі. */
+    .menu-count{position:absolute;width:1px;height:1px;margin:-1px;padding:0;
+      overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+
+    .menu-list{display:grid;grid-template-columns:repeat(3,1fr);gap:19px;margin-top:20px}
+    .menu-card[hidden]{display:none}
+
+    /* Слот для позначок складу («вегетаріанське», «без глютену», алергени).
+       Заповнює власник — вигадувати те, що люди читають через алергію,
+       не можна. Поки атрибута data-marks немає, слот не рендериться. */
+    .menu-card__marks{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0;list-style:none}
+    .menu-card__marks li{padding:4px 9px;border-radius:999px;background:var(--hairline);
+      color:var(--text-soft);font-size:11px;font-weight:800}
+
+    /* --- Рух у панелях ----------------------------------------------------
+       Поява веде scroll-driven таймлайн: жодного JS і жодного спостерігача,
+       браузер сам рахує положення елемента у своєму скролпорті (тут це
+       .panel). Те, що вже видно при відкритті, одразу в кінцевому стані. */
+    @keyframes riseInView{
+      from{opacity:0;transform:translateY(26px)}
+      to{opacity:1;transform:none}
+    }
+
+    /* Кадр «Про нас» дихає сам по собі: панель буває без прокрутки взагалі,
+       тож рух не має від неї залежати. Масштаб малий — 1.03..1.08, це зсув
+       кадру, а не зум на всю плитку. */
+    @keyframes aboutBreathe{
+      from{scale:1.03;translate:0 -1.2%}
+      to{scale:1.08;translate:0 1.2%}
+    }
+    @media (prefers-reduced-motion: no-preference){
+      #panel-about .about-photo img{
+        animation:aboutBreathe 22s ease-in-out infinite alternate;
+        will-change:scale,translate;
+      }
+    }
+    @supports (animation-timeline: view()){
+      @media (prefers-reduced-motion: no-preference){
+        /* Діапазон закінчується на `entry 100%` — тобто рівно тоді, коли
+           елемент повністю увійшов у кадр. З `cover N%` анімація вимагала
+           прокрутки, якої в коротких панелях немає: у «Про нас» на мобільному
+           адреса й години назавжди лишались на 59% і 85% прозорості. */
+        .menu-card,.section-head,.about-photo,.about-copy,.contact-box,.facts .fact,
+        .about-strip .day,.about-strip .week li,.about-figures li{
+          animation:riseInView linear both;
+          animation-timeline:view();
+          animation-range:entry 0% entry 100%;
+        }
+        /* Сусідні картки в ряду входять одночасно, тож розводимо їх
+           швидкістю: ряд перестає «клацати» цілим блоком. */
+        .menu-card:nth-child(3n+2){animation-range:entry 8% entry 100%}
+        .menu-card:nth-child(3n+3){animation-range:entry 16% entry 100%}
+        /* Тиждень набігає зліва направо: сім однакових плиток інакше
+           з'являються одним блоком і читаються як спалах. */
+        .about-strip .week li:nth-child(2){animation-range:entry 4% entry 100%}
+        .about-strip .week li:nth-child(3){animation-range:entry 8% entry 100%}
+        .about-strip .week li:nth-child(4){animation-range:entry 12% entry 100%}
+        .about-strip .week li:nth-child(5){animation-range:entry 16% entry 100%}
+        .about-strip .week li:nth-child(6){animation-range:entry 20% entry 100%}
+        .about-strip .week li:nth-child(7){animation-range:entry 24% entry 100%}
+        /* Тут колись стояв паралакс на `animation-timeline: view()` з
+           діапазоном `cover` — і застигав, бо панель «Про нас» прокручується
+           на 66 px, а `cover` вимагає, щоб елемент пройшов увесь кадр.
+           Кадр просто лишався збільшеним на 14% і не рухався ніколи.
+           Це та сама вада, через яку адреса й години колись назавжди
+           застрягали на 59% прозорості. Рух, який не залежить від
+           прокрутки, живе нижче окремим правилом. */
+      }
+    }
+
+    /* Картка меню відгукується на курсор: підйом і повільний зум кадру. */
+    .menu-card{transition:transform .3s cubic-bezier(.4,0,.2,1),box-shadow .3s ease}
+    .menu-card img{transition:scale .5s cubic-bezier(.4,0,.2,1)}
+    .menu-card:hover{transform:translateY(-6px);box-shadow:0 18px 34px rgba(42,31,22,.14)}
+    .menu-card:hover img{scale:1.05}
+
+    .chip{transition:background .2s ease,border-color .2s ease,color .2s ease,transform .12s ease}
+    .chip:active{transform:scale(.96)}
+
+    /* Смуга замовлення не з'являється ривком, а виїжджає знизу. */
+    @keyframes orderBarIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+    .order-bar:not([hidden]){animation:orderBarIn .34s cubic-bezier(.16,1,.3,1) both}
+
+    /* Індикатор «Відчинено» тихо дихає — статус живий, а не намальований.
+       Пульсує сама крапка, текст не чіпаємо. */
+    @keyframes openPulse{
+      0%,100%{opacity:.35;transform:scale(1)}
+      50%{opacity:1;transform:scale(1.35)}
+    }
+    /* Крапка стоїть у рядку статусу, а не назовні блоку: винесена за межі
+       контейнера, вона збивала ліве вирівнювання колонки на 14px. */
+    .hours small{display:flex;align-items:center;gap:6px}
+    .hours small::after{content:"";width:6px;height:6px;border-radius:50%;
+      background:currentColor;opacity:.4}
+    .hours:not(.is-closed) small::after{animation:openPulse 2.4s ease-in-out infinite}
+
+    @media (prefers-reduced-motion: reduce){
+      .menu-card,.menu-card img,.chip,.order-bar:not([hidden]){transition:none;animation:none}
+      .flavor-panel,.flavor-go{transition:none}
+      .flavor-panel:hover{transform:none}
+      .menu-card.is-target{animation:none;outline:3px solid var(--gold)}
+      .menu-card:hover{transform:none}
+      .menu-card:hover img{scale:1}
+      .hours:not(.is-closed) small::after{animation:none;opacity:1}
+    }
+    .menu-card{display:flex;flex-direction:column;overflow:hidden;border-radius:var(--r);background:var(--surface-2);box-shadow:0 8px 22px rgba(42,31,22,.07)}
+    .menu-card img{width:100%;aspect-ratio:4/3;display:block;object-fit:cover;background:var(--caramel)}
+    /* Тіло розтягуємо, щоб ціна лягала на низ картки: описи різної довжини
+       інакше давали ряд із «плаваючими» цінами. */
+    /* Заглушка замість фото. Стокове зображення не тієї страви створює
+       рівно ту проблему, яку ми вже маємо в шести позиціях; порожнє місце,
+       підписане монограмою, чесніше й не бреше про вміст тарілки. */
+    .menu-card__ph{position:relative;width:100%;aspect-ratio:4/3;display:grid;
+      place-items:center;overflow:hidden;
+      background:linear-gradient(135deg,var(--caramel),color-mix(in oklab,var(--caramel) 55%,#2A1F16))}
+    .menu-card__ph span{font:400 clamp(3rem,8vw,4.4rem)/1 var(--font-display);
+      color:rgba(255,250,243,.42)}
+    /* Тихий полиск — місце виглядає як «фото готується», а не як збій. */
+    .menu-card__ph::after{content:"";position:absolute;inset:0;
+      background:linear-gradient(105deg,transparent 38%,rgba(255,250,243,.22) 50%,transparent 62%);
+      translate:-100% 0;animation:phShine 3.4s ease-in-out infinite}
+    @keyframes phShine{0%{translate:-100% 0}55%,100%{translate:100% 0}}
+
+    /* Чернетка: позиція існує в макеті, але не підтверджена власником.
+       Підпис стоїть текстом у розмітці, а не в ::before: так його читає
+       і пошук, і програма озвучення, а не лише око. */
+    .menu-card__draft{flex:none;padding:3px 9px;border-radius:999px;background:var(--hairline);
+      color:var(--text-soft);font-size:10px;font-style:normal;font-weight:900;letter-spacing:.04em}
+
+    .menu-card__body{display:flex;flex-direction:column;flex:1;padding:17px}
+    .menu-card h3{margin:0;font-size:20px;font-weight:900;letter-spacing:-.04em}
+    .menu-card p{margin:4px 0 13px;color:var(--text-soft);font-size:14px}
+
+    /* Картка «Сьогодні радимо» веде в меню. Посилання розтягнуте на всю
+       картку, а підпис лишається текстовим — так це один зрозумілий елемент
+       і для миші, і для читача з екрана. */
+    .flavor-open{position:absolute;inset:0;z-index:2;border-radius:inherit;
+      font-size:0;color:transparent}
+    .flavor-open:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+    /* Круглі кнопки сайту всі 44 px: стрілки слайдера, «+» у меню, перемикач
+       теми, хрестик панелі. Ця була 34, а «+» на герої 36 — три різні кружки
+       в одному кадрі власник побачив одразу. */
+    .flavor-go{display:grid;place-items:center;width:44px;height:44px;flex:none;
+      border-radius:50%;background:var(--hero-b);color:var(--hero-ink);font-size:19px;
+      transition:transform .24s cubic-bezier(.4,0,.2,1),background .78s cubic-bezier(.4,0,.2,1)}
+    .flavor-panel:hover{transform:translateY(-4px)}
+    .flavor-panel:hover .flavor-go{transform:translateX(3px) scale(1.06)}
+    .flavor-panel:has(.flavor-open:focus-visible){transform:translateY(-4px)}
+
+    /* Страва, з якої прийшли, коротко підсвічується в меню. */
+    @keyframes targetGlow{
+      0%{box-shadow:0 0 0 0 var(--gold)}
+      100%{box-shadow:0 0 0 8px transparent}
+    }
+    .menu-card.is-target{animation:targetGlow 1.5s ease-out}
+    /* --- Добавки ---------------------------------------------------------
+       Меню закладу побудоване як «база + добавка», а не «одна ціна за
+       страву»: класичний млинець 60 грн, а лосось до нього — ще 195.
+       <details> дає розкриття без жодного рядка JS і лишається читабельним
+       у розмітці для пошуку. */
+    .addons{margin:0 0 12px}
+    .addons summary{display:inline-flex;align-items:center;gap:6px;min-height:32px;
+      color:var(--text-soft);font-size:13px;font-weight:800;cursor:pointer;
+      list-style:none;user-select:none}
+    .addons summary::-webkit-details-marker{display:none}
+    .addons summary::after{content:"";width:6px;height:6px;border-right:2px solid currentColor;
+      border-bottom:2px solid currentColor;rotate:45deg;translate:0 -2px;
+      transition:rotate .22s ease}
+    .addons[open] summary::after{rotate:-135deg;translate:0 1px}
+    .addons ul{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:4px}
+    .addons button{display:flex;width:100%;align-items:center;justify-content:space-between;
+      gap:10px;min-height:38px;padding:0 12px;border:1px solid var(--hairline);
+      border-radius:999px;background:transparent;color:var(--text);
+      font-size:12px;font-weight:700;text-align:left;
+      transition:background .18s ease,border-color .18s ease,transform .12s ease}
+    .addons button:hover{background:var(--hairline)}
+    .addons button:active{transform:scale(.98)}
+    .addons button b{flex:none;font-weight:900}
+    .addons button.is-added{background:var(--brand);border-color:var(--brand);color:var(--hero-ink)}
+
+    .menu-card__price{display:flex;justify-content:space-between;align-items:center;margin-top:auto}
+    .plus{width:44px;height:44px;border:0;border-radius:50%;background:var(--brand);color:var(--hero-ink);font-size:20px;transition:background .2s ease,transform .2s ease}
+    .plus:hover{background:var(--brand-deep);transform:scale(1.08)}
+    .plus.is-added{background:var(--brand);color:var(--hero-ink)}
+    .menu-card__count{margin-right:10px;font-size:13px;font-weight:900;color:var(--text-soft)}
+
+    /* --- Меню сценою -----------------------------------------------------
+       Меню говорить мовою головної: одна страва в кадрі, свій колір теми,
+       велике ім'я, кругла тарілка й супутники. Категорія обирається чипсом,
+       страва в межах категорії — стрілками, як слайдер на герої.
+       У кожній категорії по п'ять позицій; непідтверджені мають бейдж
+       «чернетка» просто на картці. */
+    .menu-filter{margin-top:22px}
+    /* Сцена: одна страва в кадрі, решта чекає. Стос лежить один на одному,
+       тож перехід між стравами не смикає висоту панелі. */
+    /* grid-template-columns скидається явно: у базовому `.menu-list` лежать
+       три колонки від старої сітки, і слайд стискався в одну з них до 427 px. */
+    .menu-list{position:relative;display:grid;grid-template-columns:1fr;gap:0;margin-top:18px}
+    .menu-card--reel{grid-area:1/1}
+    .menu-card--reel[hidden]{display:none}
+
+    /* Колонки перерозподілені на користь тарілки: при .92fr вміст займав
+       361 + 520 із 1320, і посередині лишався провал на 415 px. */
+    .menu-card--reel{position:relative;display:grid;grid-template-columns:minmax(300px,.78fr) 1fr;
+      align-items:center;align-content:center;gap:40px;
+      /* Сцена займає екран, а не половину: під карткою лишалось стільки
+         мертвого місця, що сторінка читалась як обірвана. Відняте — шапка
+         панелі, заголовок секції й чипси. */
+      min-height:max(480px,calc(100svh - 360px));
+      margin:0;padding:44px 0 104px 52px;border-radius:var(--r);
+      /* clip-path замість overflow:hidden — і `overflow:visible` тут
+         обов'язковий, бо hidden приходить із базового `.menu-card`.
+         Поки він лишався, слайд був контейнером прокрутки, і `view()`
+         на нащадках чіплявся до нього: прогрес завмирав на 0.5, рух був
+         описаний і не відбувався. Заміряно: та сама анімація на слайді
+         йшла (0.66 → 1), на тарілці всередині — ні. */
+      overflow:visible;clip-path:inset(0 round var(--r));
+      color:var(--hero-ink);box-shadow:none;
+      background:linear-gradient(145deg,var(--hero-a),var(--hero-b))}
+    .menu-card--reel[data-theme="2"]{--hero-a:#7E4A55;--hero-b:#5E3440}
+    .menu-card--reel[data-theme="3"]{--hero-a:#7A5741;--hero-b:#5C3F2E}
+    /* Слайд на весь екран не «з'являється» і не піднімається під курсором:
+       і те, й те придумано для картки в сітці. */
+    .menu-card--reel{animation:none}
+    .menu-card--reel:hover{transform:none;box-shadow:none}
+    /* Те саме світло, що на герої: без нього великий колірний блок читається
+       як заливка, а не як сцена. */
+    .menu-card--reel::before{content:"";position:absolute;width:620px;height:620px;
+      right:-4%;top:50%;translate:0 -50%;border-radius:50%;pointer-events:none;
+      background:radial-gradient(circle,rgba(255,243,232,.20),transparent 66%)}
+
+    /* 34ch давали рядок на 361 px у колонці 588 — текст стояв вузькою
+       смужкою, а решта колонки була порожня. 40ch ще в межах зручного
+       рядка й забирають зайве. */
+    /* `align-self:stretch` — і колонка займає всю висоту рядка замість того,
+       щоб висіти посередині. Ціні нічого дописувати не треба: `margin-top:auto`
+       у неї вже є, вона просто не мала куди відсунутись. Було 45% заповнення
+       картки проти 72% у тарілки, зверху й знизу лишалось 232 і 214 px. */
+    .menu-card--reel .menu-card__body{position:relative;z-index:1;max-width:40ch;
+      padding:0;align-self:stretch}
+    /* Номер лишився тільки в керуванні внизу: усередині картки він дублював
+       той самий «05 / 15» і займав місце нічим. */
+    .menu-card__index{display:none}
+    /* Стелю кегля підняли з 4.4rem до 5rem. Вище не можна: на 6.2rem
+       «Манго-крем» рвався всередині слова — «Манго-» / «крем». Перевірено
+       Range-ом на всіх 15 назвах, не на першій. */
+    .menu-card--reel h3{margin:0;font:400 clamp(2.8rem,4.6vw,5rem)/.98 var(--font-display);
+      letter-spacing:-.035em;color:var(--hero-ink)}
+    /* Не --hero-ink-soft: на світлому кінці градієнта він давав 4.52:1 при
+       порозі 4.5. Запас у дві соті — це не запас. */
+    .menu-card--reel p{margin:18px 0 0;max-width:40ch;color:var(--hero-ink);font-size:19px}
+    /* Бейдж чернетки в сцені — пігулка під назвою, а не смуга на всю
+       колонку: `flex:none` з сітки тут розтягувався на всю ширину. */
+    .menu-card--reel .menu-card__draft{align-self:flex-start;margin:10px 0 0;
+      padding:5px 12px;font-size:11px;background:rgba(255,243,232,.18);
+      color:var(--hero-ink)}
+    .menu-card__flag{align-self:flex-start;margin:0 0 14px;padding:7px 15px;border-radius:999px;
+      background:rgba(255,243,232,.18);color:var(--hero-ink);font-size:11px;font-weight:900;
+      letter-spacing:.09em;text-transform:uppercase}
+
+    /* Добавки на кольорі: кромка й чорнило кремові, заливки немає. */
+    .menu-card--reel .addons{margin:22px 0 0;max-width:420px}
+    .menu-card--reel .addons summary{color:var(--hero-ink-soft)}
+    .menu-card--reel .addons button{border-color:rgba(255,243,232,.42);color:var(--hero-ink)}
+    .menu-card--reel .addons button:hover{background:rgba(255,243,232,.14)}
+    .menu-card--reel .addons button.is-added{background:var(--hero-ink);
+      border-color:var(--hero-ink);color:var(--hero-b)}
+
+    /* `margin-top:auto`, а не 26px: скорочений `margin` тут затирав `auto`
+       з базового правила, і ціна лишалась висіти одразу під добавками —
+       колонка розтягувалась, а низ її був порожній на 238 px. Це той самий
+       клас помилки, що з `transition`: скорочений запис мовчки перекриває. */
+    .menu-card--reel .menu-card__price{max-width:420px;margin:auto 0 0;padding-top:20px;
+      border-top:1px solid rgba(255,243,232,.28)}
+    .menu-card--reel .menu-card__price strong{font-size:27px}
+    /* Головна дія сторінки не може бути кружком 44 px зі знаком «+»:
+       людина не мусить здогадуватись, що це «додати в кошик». Підпис
+       ставить JS, бо кнопка одна на всі подання картки. */
+    .menu-card--reel .plus{width:auto;min-width:44px;height:52px;padding:0 26px;
+      border-radius:999px;background:var(--hero-ink);color:var(--hero-b);
+      font:900 15px/1 Onest,system-ui,sans-serif;letter-spacing:.01em}
+    .menu-card--reel .plus:hover{background:#fff;transform:translateY(-2px) scale(1.02)}
+    .menu-card--reel .plus:active{transform:translateY(0) scale(.98)}
+    .menu-card--reel .menu-card__count{color:var(--hero-ink-soft)}
+
+    /* Тарілка — та сама композиція, що на головній, але велика й зрізана
+       правим краєм слайда: інакше вона висить у повітрі, а по боках
+       лишається порожнє поле. Зріз робить кадр, а не діру. */
+    /* Кільце тонке й кремове, а не біла плита 14 px: товста біла рамка на
+       бордовому читалась як стікер, а не як подача. Внутрішнє золоте коло
+       прибране — навколо кадру й так було чотири декоративні шари. */
+    .menu-card__plate{position:relative;z-index:1;justify-self:end;
+      /* Тарілку тримає і ширина, і висота вікна: інакше сцена перевищувала
+         екран на 63 px і керування опинялось під згином. Термін із svh
+         чіпати обережно — саме він тримає керування над згином.
+         Пласка стеля була 520px і на великому екрані обмежувала першою:
+         місця вистачало на 690, а тарілка стояла 520 і лишала посеред
+         картки мертву смугу. Тепер стеля 780, а межею стає колонка. */
+      width:min(100%,48vw,780px,calc(100svh - 440px));margin-right:min(-4%,-28px);
+      aspect-ratio:1;padding:6px;border-radius:50%;background:var(--hero-ink);
+      box-shadow:0 28px 45px rgba(82,44,4,.26),0 8px 14px rgba(42,31,22,.18)}
+    .menu-card__plate>img{width:100%;height:100%;aspect-ratio:1;display:block;
+      object-fit:cover;border-radius:50%;
+      transition:rotate 1.4s cubic-bezier(.22,1,.3,1),scale 1.4s cubic-bezier(.22,1,.3,1)}
+    .menu-card__plate>.menu-card__ph{width:100%;height:100%;aspect-ratio:1;border-radius:50%}
+    .menu-card__plate>.menu-card__ph span{font-size:clamp(5rem,12vw,9rem);
+      color:rgba(255,250,243,.62)}
+
+    /* Перехід між стравами — те саме віяло, що на герої: шари їдуть в один
+       бік на різну відстань, тарілка далі за текст. --shift задає напрямок. */
+    .menu-list{--shift:0}
+    /* `rotate` дописано в цей самий рядок, а не окремим правилом: transition —
+       скорочений запис, і власне правило `.menu-card__plate{transition:rotate}`
+       затерло б тут transform і opacity. Ця пастка в проєкті вже спрацьовувала
+       на герої, коли тарілка застигла на місці. */
+    .menu-card--reel .menu-card__body,
+    .menu-card--reel .menu-card__plate,
+    .menu-orb{transition:transform .42s cubic-bezier(.4,0,.2,1),
+                         rotate .52s cubic-bezier(.4,0,.2,1),opacity .3s ease}
+    .menu-list.is-changing .menu-card__body{transform:translateX(calc(var(--shift) * -60px))}
+    .menu-list.is-changing .menu-card__plate{transform:translateX(calc(var(--shift) * -130px));
+      rotate:calc(var(--shift) * -5deg);opacity:0}
+    .menu-list.is-changing .menu-orb{transform:translateX(calc(var(--shift) * -190px));opacity:0}
+    .menu-list.is-entering .menu-card__body,
+    .menu-list.is-entering .menu-card__plate,
+    .menu-list.is-entering .menu-orb{transition:none}
+    .menu-list.is-entering .menu-card__body{transform:translateX(calc(var(--shift) * 60px))}
+    .menu-list.is-entering .menu-card__plate{transform:translateX(calc(var(--shift) * 130px));
+      rotate:calc(var(--shift) * 5deg);opacity:0}
+    .menu-list.is-entering .menu-orb{transform:translateX(calc(var(--shift) * 190px));opacity:0}
+
+    /* ---- Перехід між стравами через View Transitions ---- */
+    /* Бокс має лише видима картка: решта під `[hidden]{display:none}`, тож
+       однакові імена на всіх п'ятнадцяти не конфліктують. */
+    .menu-card--reel .menu-card__plate{view-transition-name:dish-plate}
+    .menu-card--reel h3{view-transition-name:dish-name}
+
+    /* Тарілка й назва не зникають — їхні прямокутники переїжджають, а вміст
+       усередині змішується. Саме тому провалу в порожнечу більше немає. */
+    ::view-transition-group(dish-plate),
+    ::view-transition-group(dish-name){animation-duration:.58s;
+      animation-timing-function:cubic-bezier(.22,1,.3,1)}
+    ::view-transition-old(dish-plate),
+    ::view-transition-new(dish-plate){animation-duration:.58s}
+
+    /* Решта вмісту — опис, добавки, ціна — їде в бік гортання. Напрямок
+       приходить атрибутом на корені: до псевдоелементів переходу селектор
+       від .menu-list не дістає. */
+    ::view-transition-old(root),
+    ::view-transition-new(root){animation-duration:.42s;
+      animation-timing-function:cubic-bezier(.22,1,.3,1);mix-blend-mode:normal}
+    html[data-dish]::view-transition-old(root){animation-name:dishOut}
+    html[data-dish]::view-transition-new(root){animation-name:dishIn}
+    html[data-dish="prev"]::view-transition-old(root){animation-name:dishOutBack}
+    html[data-dish="prev"]::view-transition-new(root){animation-name:dishInBack}
+    @keyframes dishOut{to{opacity:0;transform:translateX(-26px)}}
+    @keyframes dishIn{from{opacity:0;transform:translateX(26px)}}
+    @keyframes dishOutBack{to{opacity:0;transform:translateX(26px)}}
+    @keyframes dishInBack{from{opacity:0;transform:translateX(-26px)}}
+
+    /* Вміст картки приходить сходинками, а не одним блоком: мітка, назва,
+       опис, добавки, ціна — кожне зі своїм зсувом у часі. Прозорість знято
+       з самого тіла й віддано дітям: поки гасло воно, сходинок не було
+       видно взагалі — батько вже стояв на нулі. */
+    .menu-card--reel .menu-card__body>*{
+      transition:transform .52s cubic-bezier(.22,1,.3,1) var(--step,0s),
+                 opacity .34s ease var(--step,0s)}
+    .menu-card--reel .menu-card__body>*:nth-child(2){--step:.05s}
+    .menu-card--reel .menu-card__body>*:nth-child(3){--step:.1s}
+    .menu-card--reel .menu-card__body>*:nth-child(4){--step:.15s}
+    .menu-card--reel .menu-card__body>*:nth-child(5){--step:.2s}
+    .menu-card--reel .menu-card__body>*:nth-child(6){--step:.25s}
+    .menu-list.is-changing .menu-card__body>*{opacity:0;transform:translateY(12px)}
+    .menu-list.is-entering .menu-card__body>*{transition:none;opacity:0;
+      transform:translateY(16px)}
+
+    /* Супутники — сусідні страви категорії, як орби на герої. Вони ще й
+       навігація: клік веде саме до тієї страви. */
+    .menu-orb{position:absolute;z-index:3;display:block;width:92px;aspect-ratio:1;padding:0;
+      border:4px solid #fff;border-radius:50%;background:#fff;overflow:hidden;
+      box-shadow:0 12px 20px rgba(42,31,22,.22)}
+    .menu-orb[hidden]{display:none}
+    .menu-orb img{width:100%;height:100%;object-fit:cover;display:block}
+    /* Супутник лишився один. Два кружки поруч із тарілкою, тонким кільцем і
+       золотим колом уже змагались за увагу, а нижній ще й наліз на підпис
+       «Далі». Той, що лишився, показує саме наступну страву — і поруч із
+       підписом унизу читається як навігація, а не як прикраса. */
+    .menu-orb--prev{display:none}
+    .menu-orb--next{left:44%;top:10%}
+    .menu-orb:hover{scale:1.07}
+
+    /* Керування живе всередині композиції, а не під нею: окремим рядком
+       унизу воно читалось як чужий елемент, а під карткою лишалась
+       порожнеча. Тепер це нижній край самої сцени. */
+    .menu-nav{position:absolute;left:52px;right:52px;bottom:34px;z-index:4;
+      display:flex;align-items:center;gap:12px;pointer-events:none}
+    .menu-nav>*{pointer-events:auto}
+    .menu-nav .arrow{background:rgba(255,243,232,.16);color:var(--hero-ink);
+      border:1px solid rgba(255,243,232,.44)}
+    .menu-nav .arrow:hover{background:rgba(255,243,232,.28);transform:scale(1.06)}
+    .menu-nav__count{margin:0 0 0 6px;font-size:12px;font-weight:900;
+      letter-spacing:.11em;color:var(--hero-ink-soft)}
+    .menu-nav__count b{color:var(--hero-ink)}
+    /* «Далі» — навігація, а не підпис дрібним шрифтом. */
+    /* «Далі» стоїть у ряду керування зліва, а не притиснуте до правого краю:
+       там воно лягало просто на знімок страви й ставало нечитабельним. */
+    .menu-nav__next{display:grid;gap:2px;margin:0 0 0 20px;
+      padding-left:20px;border-left:1px solid rgba(255,243,232,.28);
+      color:var(--hero-ink-soft);font-size:11px;font-weight:900;letter-spacing:.1em;
+      text-transform:uppercase}
+    .menu-nav__next b{font:400 22px/1.05 var(--font-display);letter-spacing:-.02em;
+      text-transform:none;color:var(--hero-ink)}
+    /* На телефоні слайд стає стовпчиком, і супутники лягли б просто на
+       тарілку. Гортання лишається стрілками. */
+    @media(max-width:850px){.menu-orb{display:none}}
+    @media(max-width:520px){.menu-nav__next{display:none}}
+    /* Страва повільно довертається на подачі під курсором. */
+    .menu-card--reel:hover .menu-card__plate>img{rotate:7deg;scale:1.04}
+
+
+    /* --- Замовлення ------------------------------------------------------
+       Кошик у localStorage: каси й бекенду немає, тож підсумок лишається
+       на пристрої, а підтвердження йде в Instagram. */
+    .order-bar{position:sticky;bottom:16px;z-index:6;display:flex;align-items:center;
+      justify-content:space-between;gap:16px;margin:24px 0 8px;padding:14px 14px 14px 22px;
+      border-radius:999px;background:var(--brand);color:var(--hero-ink);
+      box-shadow:0 16px 34px rgba(131,50,26,.32)}
+    .order-bar[hidden]{display:none}
+    /* Смуга липне до низу й накривала нижній ряд карток — коли вона є,
+       під списком резервуємо місце на її висоту. */
+    .menu-section:has(~ .order-bar:not([hidden])) .menu-list,
+    .panel:has(.order-bar:not([hidden])) .menu-list{padding-bottom:86px}
+    .order-bar__sum{margin:0;font-size:15px;font-weight:800}
+    #orderCount,#orderTotal,#orderSum{display:inline-block;
+      animation:digitRoll .34s cubic-bezier(.16,1,.3,1) both}
+    /* pointer-events:auto обов'язково: діалог лежить усередині <main>, який
+       має pointer-events:none, і успадковує його навіть у верхньому шарі —
+       кнопки всередині ставали неклікабельними. */
+    .order-dialog{width:min(520px,calc(100vw - 32px));padding:28px;border:0;pointer-events:auto;
+      border-radius:var(--r);background:var(--surface-2);color:var(--text);box-shadow:var(--shadow)}
+    .order-dialog::backdrop{background:rgba(42,31,22,.55)}
+    .order-dialog__head{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .order-dialog h2{margin:0;font:400 31px/1 var(--font-display);letter-spacing:-.03em}
+    .order-list{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:2px}
+    .order-list li{display:flex;align-items:center;gap:12px;padding:10px 0;
+      border-bottom:1px solid var(--hairline)}
+    .order-list li span:first-child{flex:1}
+    .order-list button{width:32px;height:32px;border:1px solid var(--hairline);
+      border-radius:50%;background:transparent;color:var(--text);font-weight:900;line-height:1}
+    .order-list button:hover{background:rgba(42,31,22,.08)}
+    .order-list .qty{min-width:24px;text-align:center;font-weight:900}
+    .order-sum{display:flex;justify-content:space-between;margin:18px 0 0;font-weight:900;font-size:18px}
+    .order-note{margin:14px 0 0;color:var(--text-soft);font-size:13px}
+    .order-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+    .order-ghost{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;
+      border:1px solid var(--hairline);border-radius:999px;font-size:13px;font-weight:900}
+    .order-ghost:hover{background:rgba(42,31,22,.08)}
+    .order-empty{margin:20px 0 0;color:var(--text-soft)}
+
+    /* --- Міні-сторінка страви --------------------------------------------
+       Клік по картці героя раніше вів у меню, і людина втрачала з очей саме
+       ту страву, яку щойно бачила. Тепер страва відкривається на місці, а
+       той самий кадр перелітає в аркуш через View Transitions API.
+       pointer-events:auto — те саме, що й у діалозі замовлення: <dialog>
+       лежить усередині <main> і успадковує його pointer-events:none навіть
+       у верхньому шарі. */
+    .dish-sheet{width:min(880px,calc(100vw - 32px));max-height:min(90svh,760px);
+      padding:0;border:0;overflow:hidden auto;pointer-events:auto;
+      border-radius:var(--r);background:var(--surface-2);color:var(--text);
+      box-shadow:var(--shadow)}
+    .dish-sheet[open]{display:flex;align-items:stretch}
+    .dish-sheet::backdrop{background:rgba(42,31,22,.55)}
+    .dish-sheet__photo{width:46%;flex:none;align-self:stretch;object-fit:cover;
+      background:var(--caramel)}
+    .dish-sheet__body{flex:1;min-width:0;display:flex;flex-direction:column;padding:32px 34px}
+    /* Кожна страва приносить в аркуш свою тему — ту саму, що фарбує героя.
+       Значення дублюються тут, а не успадковуються від .hero: аркуш лежить
+       у верхньому шарі й до дерева героя не належить. */
+    .dish-sheet{--hero-a:var(--brand);--hero-b:var(--brand-deep)}
+    .dish-sheet.theme-2{--hero-a:#7E4A55;--hero-b:#5E3440}
+    .dish-sheet.theme-3{--hero-a:#7A5741;--hero-b:#5C3F2E}
+    .dish-sheet__body{background:color-mix(in oklab,var(--hero-b) 7%,var(--surface-2))}
+    .dish-sheet .plus{background:var(--hero-b)}
+    .dish-sheet .plus:hover{background:var(--hero-a)}
+    /* Мітка була напівпрозорим золотом із темно-коричневим чорнилом — на
+       темній схемі це давало темне по темному. Тепер суцільний колір теми
+       страви й кремове чорнило: пара, яка не залежить від схеми, бо під
+       написом завжди глина, слива або кава. */
+    .dish-sheet .tag{align-self:flex-start;margin-top:0;padding:6px 13px;
+      background:var(--hero-b);color:var(--hero-ink);letter-spacing:.06em;
+      text-transform:uppercase}
+    .dish-sheet h2{margin:10px 0 6px;font:400 clamp(1.9rem,2.8vw,2.7rem)/1.02 var(--font-display);
+      letter-spacing:-.03em}
+    .dish-sheet__desc{margin:0;color:var(--text-soft)}
+    .dish-sheet .addons{margin:20px 0 0}
+    .dish-sheet__label{margin:0 0 8px;color:var(--text-soft);font-size:12px;
+      font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    .dish-sheet__foot{display:flex;align-items:center;justify-content:space-between;
+      gap:16px;margin-top:auto;padding-top:22px}
+    .dish-sheet__foot strong{font-size:24px}
+    .dish-sheet__all{display:inline-flex;align-items:center;min-height:44px;
+      margin-top:10px;color:var(--text-soft);font-size:13px;font-weight:800;
+      text-decoration:underline;text-underline-offset:3px}
+    .dish-sheet__all:hover{color:var(--text)}
+    .dish-sheet__close{position:absolute;top:14px;right:14px;z-index:3;
+      background:var(--surface-2)}
+    @media(max-width:700px){
+      .dish-sheet[open]{flex-direction:column}
+      .dish-sheet__photo{width:100%;aspect-ratio:4/3}
+      .dish-sheet__body{padding:22px}
+    }
+    /* Текст починається на одній лінії з кадром, а не висить по центру:
+       при центруванні його верх стояв на 77 px нижче за фото, і колонка
+       читалась як зсунута вниз. */
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start}.about-photo{border-radius:36px;overflow:hidden;min-height:410px;box-shadow:var(--shadow);background:var(--caramel)}.about-photo img{width:100%;height:100%;object-fit:cover;display:block}.about-copy h2{margin:8px 0 15px;font:400 clamp(2.7rem,5vw,4.1rem)/.95 var(--font-display);letter-spacing:-.05em}.about-copy>p{color:var(--text-soft)}.facts{display:grid;gap:14px;margin-top:28px}.fact{display:flex;gap:12px;align-items:flex-start}.fact svg{width:22px;flex:none;color:var(--caramel);margin-top:2px}.fact strong{display:block;font-size:15px}.fact span{color:var(--text-soft);font-size:14px}/* Кавовий градієнт замість суцільного --ink: у темній схемі темна плита на
+   темній сторінці зникала, і блок читався як порожній прямокутник. Тон
+   узятий глибший за тему «кава», щоб золотий надзаголовок тримався вище
+   4.5:1 на світлому кінці градієнта. */
+.contacts{background:linear-gradient(150deg,#6B4A38,#432D20);color:#fff}.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px}.contacts .eyebrow{color:#efc56c}.contacts h2{margin:8px 0 15px;font:400 clamp(2.9rem,5vw,4.2rem)/.95 var(--font-display);letter-spacing:-.05em}.contacts p{max-width:450px;color:rgba(255,250,243,.7)}.contact-box{padding:31px;border-radius:var(--r);background:rgba(255,250,243,.08);border:1px solid rgba(255,250,243,.17)}.contact-box a{display:flex;gap:12px;align-items:center;margin:14px 0;color:#fff;font-weight:800}.contact-box svg{color:#efc56c}.contact-box small{display:block;color:rgba(255,250,243,.62)}
+    /* Заголовок блоку питає «Завітаєте сьогодні?» — отже, тут має бути
+       відповідь. Стан і графік беруться з того самого розкладу, що й герой. */
+    .contact-line{display:flex;gap:12px;align-items:center;margin:18px 0 0;
+      padding-top:16px;border-top:1px solid rgba(255,250,243,.17);font-weight:800}
+    .contact-line svg{flex:none;color:#efc56c}
+    .contact-line strong{display:block}
+    /* Панель питає й лишала людину без відповіді: далі не було куди піти. */
+    .contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .contacts .order-ghost{border-color:rgba(255,250,243,.44);color:#fff}
+    .contacts .order-ghost:hover{background:rgba(255,250,243,.14)}
+    /* --- «Про нас»: живий портрет закладу --------------------------------
+       Панель була фото плюс абзац плюс дві дрібні позначки, і дві третини
+       екрана лишались порожніми. Смуга під ними каже те, що сайт і так
+       знає: скільки лишилось робочого дня, який сьогодні графік і що є
+       в меню. Жодне число тут не вписане руками — усі рахуються. */
+    .about-strip{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr auto;
+      align-items:center;gap:34px;margin-top:46px;padding-top:32px;
+      border-top:1px solid var(--hairline)}
+
+    .day{display:flex;align-items:center;gap:18px}
+    /* Кільце — частка робочого дня, що минула. conic-gradient по куту, який
+       живе окремою властивістю, тож його можна плавно анімувати. */
+    .day__dial{position:relative;display:grid;place-items:center;width:104px;height:104px;
+      flex:none;border-radius:50%;
+      background:conic-gradient(var(--brand) calc(var(--dial) * 1turn),var(--hairline) 0);
+      transition:--dial 1.1s cubic-bezier(.16,1,.3,1)}
+    .day__dial::before{content:"";position:absolute;inset:9px;border-radius:50%;
+      background:var(--surface-2)}
+    /* Onest, а не дисплейний: Cormorant малює старостильні цифри, і «11»
+       читалось як «ıı». Ціни на сайті з тієї ж причини набрані Onest. */
+    .day__dial span{position:relative;font:800 17px/1 Onest,system-ui,sans-serif}
+    .day__dial small{position:relative;margin-top:3px;font-size:9px;font-weight:800;
+      letter-spacing:.06em;text-transform:uppercase;color:var(--text-soft)}
+    .day.is-closed .day__dial{background:conic-gradient(var(--text-soft) calc(var(--dial) * 1turn),var(--hairline) 0)}
+    .day__text strong{display:block;font-size:17px}
+    .day__text span{color:var(--text-soft);font-size:14px}
+
+    .week{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none;
+      justify-content:center}
+    .week li{display:grid;gap:2px;justify-items:center;min-width:52px;padding:8px 6px;
+      border-radius:14px;border:1px solid transparent;color:var(--text-soft);
+      font-size:11px;font-weight:800;letter-spacing:.04em}
+    .week b{font-size:12px;text-transform:uppercase}
+    .week .is-today{border-color:var(--brand);background:color-mix(in oklab,var(--brand) 12%,transparent);
+      color:var(--text)}
+    .week .is-off{opacity:.55}
+
+    .about-figures{display:grid;gap:10px;margin:0;padding:0;list-style:none;text-align:right}
+    .about-figures li{display:grid;gap:1px}
+    .about-figures b{font:900 23px/1 Onest,system-ui,sans-serif;letter-spacing:-.02em}
+    .about-figures span{color:var(--text-soft);font-size:12px;font-weight:700;
+      letter-spacing:.05em;text-transform:uppercase}
+
+    @media(max-width:850px){
+      .about-strip{grid-template-columns:1fr;gap:24px;margin-top:32px;padding-top:24px}
+      .week{justify-content:flex-start}
+      .about-figures{text-align:left;grid-template-columns:repeat(3,1fr)}
+    }
+
+    .site-footer{padding:25px 0 calc(25px + env(safe-area-inset-bottom));background:#1d140f;color:rgba(255,250,243,.72)}
+    /* .footer-inner лежить у власному .container: без нього текст упирався
+       в правий край скругленої плашки й візуально обрізався. */
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:13px}
+    .footer-inner strong{color:#fff}
+    .image-fallback{background:linear-gradient(130deg,var(--caramel),var(--ink))!important}
+    @media(max-width:850px){.hero{min-height:auto}.nav{display:none}.menu-toggle{display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:50%;background:rgba(255,255,255,.25);color:#fff;font-size:20px}.order-link{display:none}.hero-grid{min-height:auto;padding:42px 0 52px;grid-template-columns:1fr;grid-template-areas:"copy" "product" "card";gap:30px}.hero-copy{padding:0;text-align:center}.hero-copy p{margin-inline:auto}.hours{justify-content:center;margin-top:26px}.product{width:min(82vw,430px);margin:auto}.flavor-panel{justify-self:center;width:min(100%,360px);padding:17px;display:grid;grid-template-columns:110px 1fr;column-gap:17px;align-items:center}.flavor-image{grid-row:span 4;aspect-ratio:1}.tag{margin:0;width:max-content}.flavor-panel h2{font-size:27px}.price-row{margin-top:8px;padding-top:8px}.hero-foot{flex-direction:column;align-items:stretch;gap:14px}.hero-foot .dish-nav{justify-content:center}.menu-card--reel{grid-template-columns:1fr;gap:26px;padding:30px 24px;min-height:calc(100svh - 120px)}.menu-card--reel .menu-card__body{order:2;max-width:none}.menu-card--reel p{max-width:none}.menu-card__plate{order:1;width:min(72vw,300px);justify-self:center;margin-right:0}.menu-filter{top:70px}.about-grid,.contact-grid{grid-template-columns:1fr;gap:32px}.about-photo{min-height:320px}section:not(.hero){padding:70px 0}}
+    @media(max-width:520px){.container{width:min(100% - 28px,1160px)}.brand{font-size:20px}.brand-mark{width:34px;height:34px}.hero-grid{padding-top:32px}.hero-copy h1{font-size:4.8rem}.orb{width:60px;margin:-30px 0 0 -30px}.about-photo{min-height:260px}.contact-box{padding:23px}.footer-inner{align-items:flex-start;flex-direction:column}.flavor-panel{width:100%}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.primary{transition:none}}
+    /* Явний фокус: свій колір для темних поверхонь, інакше кільце зникає. */
+    :focus-visible{outline:3px solid var(--text);outline-offset:3px;border-radius:8px}
+    .hero :focus-visible{outline-color:var(--hero-ink)}
+    .contacts :focus-visible,.contacts :focus-visible,.site-footer :focus-visible,
+    .order-bar :focus-visible{outline-color:var(--ink)}
+    .contacts :focus-visible,.site-footer :focus-visible,.order-bar :focus-visible{outline-color:#FFFAF3}
+
+    /* --- Темна схема ------------------------------------------------------
+       Міняються тільки поверхні сторінки. Герой лишається кольоровим, а
+       --ink на ньому — темним: під ним завжди золото, помаранч або бузок,
+       і від теми відвідувача це не залежить. */
+    /* light-dark() тримає обидва значення в одному оголошенні, тож ручний
+       вибір зводиться до зміни color-scheme — дублювати весь набір токенів
+       під медіазапит і під атрибут не треба. */
+    :root[data-theme="light"]{color-scheme:light}
+    :root[data-theme="dark"]{color-scheme:dark}
+
+    /* Фото на темному тлі б'ють по очах менше, якщо трохи притишити. */
+    @media (prefers-color-scheme: dark){
+      :root:not([data-theme="light"]) .menu-card img{filter:brightness(.92)}
+    }
+    :root[data-theme="dark"] .menu-card img{filter:brightness(.92)}
+    .menu-card:hover img{filter:none}
+ 
+    /* ---- Single-page hero + full-screen panel navigation ---- */
+    /* svh, а не vh: на iOS адресний рядок з'їдає різницю, і нижній край
+       героя (картка страви + лічильник) опинявся за межами екрана. */
+    /* Герой тримає весь екран, і це не обговорюється: під ним на головній
+       нічого немає. Спроба обмежити його 940 px прибрала порожнечу всередині
+       й одразу дала мертву смугу знизу — гірше, ніж було. */
+    .hero{min-height:100svh;display:flex;flex-direction:column}
+    /* Шапка лишається зверху, а сітка забирає решту висоти й центрує вміст
+       усередині себе. Центрувати весь контейнер не можна — шапка відривалась
+       від верхнього краю на високих екранах. */
+    .hero>.container{flex:1;display:flex;flex-direction:column}
+    .hero .hero-grid{flex:1;align-content:center}
+
+    /* Метрики Playfair інші за DM Serif: при line-height .75 рядок «смаки»
+       наїжджав на абзац під ним. */
+    .hero-copy h1{line-height:.86;letter-spacing:-.04em;margin-bottom:26px}
+    /* Прокрутку блокуємо тільки поки поверх лежить панель або оверлей.
+       Ширину смуги прокрутки компенсує --scrollbar-w, який рахує JS:
+       scrollbar-gutter:stable тут не годиться — на мобільному смуга
+       накладна, і резерв показував би кремову смужку вздовж краю. */
+    body.panel-open{overflow:hidden;padding-right:var(--scrollbar-w,0px)}
+ 
+    /* Гамбургер тільки там, де пігулка навігації схована. Раніше це правило
+       йшло після медіазапиту й скидало display на grid: на десктопі поруч
+       висіли пігулка з тими самими чотирма пунктами, «Замовити» і гамбургер —
+       три двері в одну кімнату. */
+    .menu-toggle{display:none}
+    @media(max-width:850px){
+      .menu-toggle{position:relative;z-index:210;display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,243,232,.18);color:var(--hero-ink);font-size:0;transition:background .3s ease}
+    }
+    .menu-toggle span{display:block;position:absolute;width:20px;height:2px;border-radius:2px;background:var(--hero-ink);transition:transform .35s cubic-bezier(.4,0,.2,1),opacity .25s ease,background .3s ease}
+    .menu-toggle span:nth-child(1){translate:0 -6px}
+    .menu-toggle span:nth-child(3){translate:0 6px}
+ 
+    /* Each destination (Меню / Про нас / Контакти) becomes a full-screen panel that
+       slides/fades over the hero instead of the page scrolling to it. */
+    main{position:fixed;inset:0;z-index:150;pointer-events:none}
+    /* --- Поверхня панелей -------------------------------------------------
+       Пласка заливка на весь екран читалась як мертве коричневе поле,
+       особливо в темній схемі. Тепер під контентом два тихі світла з кутів
+       і зерно — те саме, чим тримається кадр героя.
+
+       Шари лежать у самому background панелі, а не в псевдоелементі: панель
+       сама є контейнером прокрутки, і `background-attachment:scroll`
+       (типовий) прив'язує їх до її рамки, а не до вмісту, тож світло стоїть
+       на місці, поки стрічка їде. Псевдоелемент із inset:0 поїхав би разом
+       із контентом і закінчився на першому екрані. */
+    :root{--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.34'/%3E%3C/svg%3E")}
+    .panel{position:absolute;inset:0;overflow-y:auto;
+      background:
+        var(--grain),
+        radial-gradient(115% 60% at 50% -6%,color-mix(in oklab,var(--brand) 20%,transparent),transparent 62%),
+        radial-gradient(75% 45% at 100% 104%,color-mix(in oklab,var(--caramel) 14%,transparent),transparent 66%),
+        var(--surface);
+      background-blend-mode:soft-light,normal,normal,normal;}
+    #panel-menu{background:var(--surface-3)}
+    #panel-menu .panel-topbar{background:var(--surface-3)}
+    .panel{opacity:0;transform:translateY(40px) scale(.98);pointer-events:none;transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
+    .panel section{padding-top:20px}
+
+    /* --- Панелі тримають висоту -------------------------------------------
+       «Про нас» і «Контакти» — це 3-4 елементи на весь екран; решта була
+       порожня, і низ кадру ні на що не спирався. Тепер контейнер панелі
+       розтягнутий, секція забирає вільну висоту й центрує вміст усередині
+       себе, а фото росте разом із вікном. Меню сюди не входить: там сітка
+       карток має текти згори, а не зависати посередині. */
+    #panel-about > .container,
+    #panel-contacts > .container{min-height:100%;display:flex;flex-direction:column}
+    #panel-about section{flex:1;display:flex;align-items:center}
+    /* «Контакти» більше не розтягуються на весь екран: блок був заввишки в
+       панель, а вміст висів смугою посередині — вийшов величезний порожній
+       прямокутник. Тепер він за розміром вмісту, стоїть по центру, а навколо
+       видно поверхню панелі зі світлом і зерном. */
+    /* Ширина по контейнеру, а не 1120 px: втоплений блок стояв на 100 px
+       вужче за шапку й підвал, і панель читалась як зсунута. */
+    #panel-contacts .contacts{flex:0 1 auto;margin:auto 0;display:flex;align-items:center;
+      width:100%;padding:clamp(38px,4.4vw,60px) clamp(28px,3.4vw,52px)}
+    #panel-about .about-grid,
+    #panel-contacts .contact-grid{width:100%}
+    #panel-about .about-photo{height:100%;min-height:clamp(300px,54svh,640px)}
+
+    /* Нижня смуга панелі — та сама роль, що й у героя: прибити низ кадру. */
+    .panel-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+      gap:16px;margin-top:auto;padding:18px 0 4px;
+      border-top:1px solid var(--hairline);
+      font-size:13px;font-weight:600;color:var(--text-soft)}
+    .panel-foot a{font-weight:700;color:var(--text)}
+    .panel-foot a:hover{text-decoration:underline;text-underline-offset:3px}
+    .panel section.contacts{border-radius:var(--r);padding:44px 40px}
+    .panel .site-footer{margin-top:20px;border-radius:var(--r)}
+    .panel.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+ 
+    /* ---- Hero entrance animation on page load ---- */
+    @keyframes riseIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes popIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+    .hero:not(.is-ready) :is(.header,.hero-copy>*,.product,.flavor-panel,.hero-counter){opacity:0;animation:riseIn .8s cubic-bezier(.16,1,.3,1) forwards}
+    .header{animation-delay:.05s}
+    .eyebrow{animation-delay:.15s}
+    h1{animation-delay:.22s}
+    .hero-copy p{animation-delay:.32s}
+    .cta-group,.primary{animation-delay:.4s}
+    .hours{animation-delay:.5s}
+    .hero:not(.is-ready) .product{animation:popIn .9s cubic-bezier(.16,1,.3,1) forwards;animation-delay:.35s}
+    .flavor-panel{animation-delay:.5s}
+    .hero-counter{animation-delay:.7s}
+    /* Поява описана через :not(.is-ready), а не через «увімкнув і заглушив».
+       Раніше глушник ставив opacity:1 і, стоячи у файлі нижче, перебивав
+       .is-changing — тарілка й картка їхали видимими й на очах телепортувались
+       через екран у момент підміни. */
+    @media(prefers-reduced-motion:reduce){.header,.hero-copy>*,.product,.flavor-panel,.hero-counter{animation:none;opacity:1}}
+ 
+    /* ---- Dish slider (like the reference video: background word + color morph) ---- */
+    /* inherits:true, і це не косметика. З false нащадки брали не значення
+       теми, а initial-value: тло героя морфилось у сливу, а «+» на кнопці
+       й «→» на картці лишались глиняними rgb(124,69,48) в усіх трьох темах.
+       Заміряно на всіх трьох — три однакові числа проти трьох різних тіл. */
+    /* Кут кільця робочого дня. Без @property це просто рядок, і жодного
+       переходу не буде — кільце стрибне в кінцеве значення за один кадр. */
+    @property --dial{syntax:'<number>';inherits:false;initial-value:0}
+
+    @property --hero-a{syntax:'<color>';inherits:true;initial-value:#9E5C42}
+    @property --hero-b{syntax:'<color>';inherits:true;initial-value:#7C4530}
+    .hero{--hero-a:var(--brand);--hero-b:var(--brand-deep);
+      transition:--hero-a .78s cubic-bezier(.4,0,.2,1),--hero-b .78s cubic-bezier(.4,0,.2,1)}
+    .hero.theme-2{--hero-a:#7E4A55;--hero-b:#5E3440}
+    /* Шоколадно-карамельна замість фіолетової: бузок у палітрі кав'ярні
+       був чужим і, найімовірніше, приїхав із референсного відео разом
+       із рештою структури. Тон світлий рівно настільки, щоб темне
+       чорнило трималось вище 4.5:1 на темному кінці градієнта. */
+    .hero.theme-3{--hero-a:#7A5741;--hero-b:#5C3F2E}
+    /* --- Перехід між стравами -------------------------------------------
+       Шари їдуть в один бік, але на різну відстань — далекі орби більше,
+       ніж близька картка. Так зміна читається як рух повз страву, а не як
+       підміна картинки. --shift задає напрямок: +1 «далі», -1 «назад».
+       Кожен шар множить його на власний коефіцієнт. */
+    .hero-grid{--shift:0}
+    .product,.flavor-panel,.orb{
+      transition:transform .42s cubic-bezier(.4,0,.2,1),rotate .42s cubic-bezier(.4,0,.2,1),
+                 opacity .32s ease}
+    .is-changing .product{transform:translateX(calc(var(--shift) * -90px));opacity:0}
+    .is-changing .flavor-panel{transform:translateX(calc(var(--shift) * -42px));opacity:0}
+    .is-changing .orb-one{transform:translateX(calc(var(--shift) * -190px));opacity:0}
+    .is-changing .orb-two{transform:translateX(calc(var(--shift) * -120px));opacity:0}
+    .is-changing .orb-three{transform:translateX(calc(var(--shift) * -230px));opacity:0}
+    /* Тарілка ще й трохи довертається — страва наче обертається на подачі.
+       rotate окремою властивістю, щоб не змагатись із transform паралаксу;
+       тривалість описана у спільному правилі вище, інакше скорочений
+       transition затирає там transform і opacity. */
+    .is-changing .product{rotate:calc(var(--shift) * -7deg)}
+    .is-entering .product{rotate:calc(var(--shift) * 7deg)}
+
+    /* Мітка «Сьогодні радимо» з'являється трохи пізніше за картку —
+       око встигає перейти на неї після того, як картка стала на місце. */
+    @keyframes tagPop{
+      from{opacity:0;transform:translateY(6px) scale(.94)}
+      to{opacity:1;transform:none}
+    }
+    .flavor-panel .tag{animation:tagPop .42s cubic-bezier(.16,1,.3,1) .16s both}
+
+    /* Номер слайда перекочується, а не підмінюється. */
+    @keyframes digitRoll{
+      from{opacity:0;transform:translateY(-70%)}
+      to{opacity:1;transform:none}
+    }
+    .hero-counter b{display:inline-block;animation:digitRoll .38s cubic-bezier(.16,1,.3,1) both}
+
+    /* Вхід: шари стоять зі свого боку й не анімуються, поки їх туди ставлять. */
+    .is-entering .product,
+    .is-entering .flavor-panel,.is-entering .orb{transition:none}
+    .is-entering .product{transform:translateX(calc(var(--shift) * 90px));opacity:0}
+    .is-entering .flavor-panel{transform:translateX(calc(var(--shift) * 42px));opacity:0}
+    .is-entering .orb-one{transform:translateX(calc(var(--shift) * 190px));opacity:0}
+    .is-entering .orb-two{transform:translateX(calc(var(--shift) * 120px));opacity:0}
+    .is-entering .orb-three{transform:translateX(calc(var(--shift) * 230px));opacity:0}
+
+
+    /* --- Паралакс від курсора -------------------------------------------
+       JS дає лише два числа (--mx, --my у діапазоні -1..1), решту рахує CSS.
+       Ближні шари їдуть більше за дальні — звідси відчуття глибини.
+       Вмикається тільки там, де є справжній курсор: на дотику це не працює
+       і лише з'їдало б батарею. */
+    @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference){
+      .hero-grid{--mx:0;--my:0}
+      .product{translate:calc(var(--mx) * 9px) calc(var(--my) * 7px)}
+      .flavor-panel{translate:calc(var(--mx) * -6px) calc(var(--my) * -5px)}
+      /* Орби їхали за курсором на 20–28 px і встигали за ним ривком.
+         Хід зменшено, час подовжено — рух читається як інерція скла,
+         а не як смикання. */
+      .orb{translate:calc(var(--mx) * 13px) calc(var(--my) * 10px)}
+      .orb-three{translate:calc(var(--mx) * 17px) calc(var(--my) * 13px)}
+      .product,.flavor-panel,.orb{
+        transition:transform .42s cubic-bezier(.4,0,.2,1),rotate .42s cubic-bezier(.4,0,.2,1),
+                   opacity .32s ease,translate .85s cubic-bezier(.16,1,.3,1)}
+      /* Під час зміни страви курсор не перетягує ковдру на себе. */
+      .is-changing .product,.is-changing .flavor-panel,
+      .is-changing .orb,.is-entering .product,
+      .is-entering .flavor-panel,.is-entering .orb{translate:none}
+    }
+
+    /* --- Нижня смуга героя -----------------------------------------------
+       Раніше стрілки й лічильник висіли абсолютом у правому куті, а під
+       композицією лишалась порожня пляма на 100–150px. Тепер це одна смуга
+       на всю ширину: вона тримає низ кадру й заразом каже, що тут готують. */
+    .hero-foot{position:relative;z-index:2;display:flex;align-items:center;gap:28px;
+      padding:16px 0 4px;border-top:1px solid rgba(255,243,232,.20)}
+    .ticker{flex:1;min-width:0;overflow:hidden;
+      -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+      mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+    /* Два однакові набори підряд: зсув на -50% зациклюється без стику. */
+    .ticker__row{display:flex;width:max-content;animation:tickerDrift 46s linear infinite}
+    .ticker span{display:inline-flex;align-items:center;padding-right:40px;
+      font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+      color:var(--hero-ink-soft);white-space:nowrap}
+    .ticker span::after{content:"";width:4px;height:4px;margin-left:40px;border-radius:50%;
+      background:currentColor;opacity:.5}
+    @keyframes tickerDrift{to{transform:translateX(-50%)}}
+    .hero-foot .dish-nav{position:static;flex:none}
+    /* --- Дрейф гарніру ---------------------------------------------------
+       Орби тихо гойдаються в стані спокою. Різні тривалості й затримки,
+       щоб рух не збігався в такт — інакше читається як механічне мигтіння.
+       rotate лишається на .orb-*, тому обертання живе окремою властивістю. */
+    /* Гойдається кадр усередині кружка, а не сам кружок.
+       translate, а не object-position: перше браузер віддає відеокарті,
+       друге перемальовує знімок кожен кадр — на око це видно як ривки.
+       Крива синусоїдна, без ривка на розвороті; хід 9 px при запасі 12 px. */
+    @keyframes orbDrift{
+      0%,100%{translate:0 0}
+      50%{translate:0 -9px}
+    }
+    .orb img{animation:orbDrift 7.5s cubic-bezier(.45,0,.55,1) infinite;will-change:translate}
+    .orb-two img{animation-duration:9.2s;animation-delay:-2.6s}
+    .orb-three img{animation-duration:8.4s;animation-delay:-4.7s}
+    /* Під час переходу дрейф не потрібен: два рухи одночасно змазують кадр. */
+    .is-changing .orb img,.is-entering .orb img{animation-play-state:paused}
+
+    @media(prefers-reduced-motion:reduce){
+      .hero,.product,.flavor-panel,.flavor-image,.orb{transition:none!important}
+      /* Дрейф живе на .orb img, а не на .orb — правило лише для .orb його
+         не вимикало, і гарнір гойдався навіть при вимкненому русі. */
+      .orb,.orb img{animation:none}
+      #panel-about .about-photo img{animation:none;scale:1;translate:none}
+      .day__dial{transition:none}
+      .ticker__row{animation:none}
+      .menu-card__ph::after{animation:none;opacity:0}
+      .nav-pill{transition:none}
+      #orderCount,#orderTotal,#orderSum{animation:none}
+      /* Доверт тарілки, поп мітки й перекочування цифри — теж рух. */
+      .is-changing .product,.is-entering .product{rotate:none}
+      .flavor-panel .tag,.hero-counter b{animation:none}
+      /* Без руху зміщення не має сенсу — шари просто з'являються на місці. */
+      .is-changing .product,.is-changing .flavor-panel,
+      .is-changing .orb,.is-entering .product,
+      .is-entering .flavor-panel,.is-entering .orb{transform:none}
+      /* Те саме для сцени меню: сходинки, доверт тарілки й зсув вимикаються
+         там, де вони описані, — не на батьках. Правило на самому
+         `.menu-card__body` не вимкнуло б `--step` на його дітях. */
+      .menu-card--reel .menu-card__body,
+      .menu-card--reel .menu-card__body>*,
+      .menu-card--reel .menu-card__plate,.menu-orb{transition:none!important}
+      .menu-list.is-changing .menu-card__plate,
+      .menu-list.is-entering .menu-card__plate{rotate:none}
+      .menu-list.is-changing .menu-card__body,
+      .menu-list.is-changing .menu-card__body>*,
+      .menu-list.is-changing .menu-card__plate,.menu-list.is-changing .menu-orb,
+      .menu-list.is-entering .menu-card__body,
+      .menu-list.is-entering .menu-card__body>*,
+      .menu-list.is-entering .menu-card__plate,
+      .menu-list.is-entering .menu-orb{transform:none}
+    }
+    .panel-topbar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:calc(18px + env(safe-area-inset-top)) 0 18px;background:var(--surface)}
+    .panel-topbar .brand{color:var(--text)}
+    .panel-topbar .brand-mark{background:var(--hairline);border:1px solid var(--hairline);color:var(--text)}
+    .panel-close{display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:50%;background:var(--hairline);color:var(--text);transition:background .25s ease,transform .25s ease}
+    .panel-close:hover{background:var(--hairline);filter:brightness(1.4);transform:rotate(90deg)}
+    .panel-close svg{width:18px;height:18px}
+ 
+    /* Home button state highlighting */
+    .nav a.active,.menu-toggle.is-open span:nth-child(1){}
+    @media(prefers-reduced-motion:reduce){.panel,.menu-toggle span{transition:none!important}}
+  </style>
+  <style>
+    /* Overlay full-screen quick nav (opened via hamburger, shows the 4 destinations) */
+    .nav-overlay{position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;background:var(--surface);opacity:0;transform:translateY(-24px);pointer-events:none;transition:opacity .45s cubic-bezier(.4,0,.2,1),transform .45s cubic-bezier(.4,0,.2,1)}
+    .nav-overlay.is-open{opacity:1;transform:translateY(0);pointer-events:auto}
+    .menu-toggle.is-open{background:rgba(42,31,22,.08)}
+    .menu-toggle.is-open span{background:var(--text)}
+    .menu-toggle.is-open span:nth-child(1){translate:0 0;rotate:45deg}
+    .menu-toggle.is-open span:nth-child(2){opacity:0}
+    .menu-toggle.is-open span:nth-child(3){translate:0 0;rotate:-45deg}
+    .nav-overlay:before{content:"";position:absolute;width:650px;height:650px;left:50%;top:0;translate:-50% -38%;border-radius:50%;background:radial-gradient(circle,rgba(229,161,35,.16),transparent 66%);pointer-events:none}
+    .nav-overlay-top{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:calc(18px + env(safe-area-inset-top)) 20px 0;width:min(1160px,calc(100% - 40px));margin:0 auto}
+    .nav-overlay-top .brand{color:var(--text)}
+    .nav-overlay-top .brand-mark{background:var(--hairline);border:1px solid var(--hairline);color:var(--text)}
+    .nav-overlay-links{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:20px}
+    .nav-overlay-links a{display:block;font:400 clamp(2.6rem,9vw,5rem)/1.05 var(--font-display);letter-spacing:-.03em;color:var(--text);padding:6px 18px;opacity:0;transform:translateY(22px);transition:opacity .5s cubic-bezier(.4,0,.2,1),transform .5s cubic-bezier(.4,0,.2,1),color .25s ease}
+    .nav-overlay-links a:hover,.nav-overlay-links a:focus-visible{color:var(--gold-deep)}
+    .nav-overlay.is-open .nav-overlay-links a{opacity:1;transform:translateY(0)}
+    .nav-overlay-links a:nth-child(1){transition-delay:.08s}
+    .nav-overlay-links a:nth-child(2){transition-delay:.14s}
+    .nav-overlay-links a:nth-child(3){transition-delay:.2s}
+    .nav-overlay-links a:nth-child(4){transition-delay:.26s}
+    .nav-overlay-foot{position:relative;z-index:1;display:flex;justify-content:center;gap:22px;padding:0 20px calc(30px + env(safe-area-inset-bottom));font-size:13px;font-weight:800;color:var(--text-soft)}
+    .nav-overlay-foot a{color:var(--text-soft)}
+    .nav-overlay-foot a:hover{color:var(--text)}
+    @media(prefers-reduced-motion:reduce){.nav-overlay,.nav-overlay-links a{transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="hero" id="home" data-od-id="hero"><div class="container">
+    <div class="header" data-od-id="navigation"><a class="brand" href="#home"><span class="brand-mark">ДМ</span>Дім Млинців</a><nav class="nav" aria-label="Основна навігація"><span class="nav-pill" aria-hidden="true"></span><a class="active" href="#home">Головна</a><a href="#menu">Меню</a><a href="#about">Про нас</a><a href="#contacts">Контакти</a></nav><a class="order-link" href="#menu">Замовити</a><button class="theme-toggle" id="themeToggle" type="button" data-state="auto"><svg class="i-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18" /><path d="M12 3a9 9 0 0 1 0 18" fill="currentColor" stroke="none"/></svg><svg class="i-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7" stroke-linecap="round"/></svg><svg class="i-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.6 8.6 0 1 0 10.2 10.2Z" stroke-linejoin="round"/></svg></button><button class="menu-toggle" id="menuToggle" aria-label="Відкрити меню" aria-expanded="false" aria-controls="navOverlay"><span></span><span></span><span></span></button></div>
+    <div class="hero-grid"><div class="hero-copy"><span class="eyebrow">Смак Ужгорода · щодня</span><h1><span class="outline">Теплі</span><br>смаки</h1><p>Щедрі млинці, пухкі панкейки та запашна кава для сніданків, зустрічей і маленьких радощів.</p><a class="primary" href="#menu">Обрати страву<b>+</b></a><div class="hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><small id="hoursStatus">Години роботи</small><strong id="hoursDetail">пн–пт 08:00–19:00</strong></div></div></div>
+      <div class="product" data-od-id="hero-product" id="dishProduct"><div class="plate"><img id="dishImg" fetchpriority="high" src="https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=1200&q=88" alt="Млинці з манго та карамеллю"></div><div class="orb orb-one"><img loading="lazy" src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=720&q=80" alt=""></div><div class="orb orb-two"><img loading="lazy" src="https://images.unsplash.com/photo-1734056650036-7002ede7b8f8?auto=format&fit=crop&w=720&q=80" alt=""></div><div class="orb orb-three"><img loading="lazy" src="https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=720&q=80" alt=""></div></div>
+      <aside class="flavor-panel" data-od-id="featured-dish" id="dishPanel"><img class="flavor-image" id="dishFlavorImg" src="https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=500&q=80" alt="Млинці Манго-крем"><span class="tag">Сьогодні радимо</span><h2 id="dishTitle">Манго-крем</h2><p id="dishDesc">Манго, ніжний крем і карамель.</p><div class="price-row"><strong id="dishPrice">60 грн</strong><span class="flavor-go" aria-hidden="true">→</span></div><a class="flavor-open" id="dishOpen" href="#menu">Роздивитися зблизька</a></aside>
+    </div>
+    <div class="hero-foot">
+      <div class="ticker" aria-hidden="true"><div class="ticker__row"><span>Млинці</span><span>Панкейки</span><span>Сирники</span><span>Кава</span><span>Сніданки</span><span>Із собою</span><span>Млинці</span><span>Панкейки</span><span>Сирники</span><span>Кава</span><span>Сніданки</span><span>Із собою</span></div></div>
+      <div class="dish-nav">
+        <button class="arrow" id="dishPrev" aria-label="Попередня страва">‹</button>
+        <button class="arrow" id="dishNext" aria-label="Наступна страва">›</button>
+        <p class="hero-counter"><b id="dishIndex">01</b> / <span id="dishTotal">03</span></p>
+      </div>
+    </div>
+  </div></header>
+ 
+  <!-- Кадри решти страв підвантажує слайдер після завантаження сторінки
+       (див. preloadRest). Раніше тут лежав <div class="dish-preload"> без
+       жодного CSS-правила: чотири картинки рендерились як звичайний блок
+       390×4785 px і висіли під сайтом. -->
+
+  <div class="nav-overlay" id="navOverlay" inert>
+    <div class="nav-overlay-top"><a class="brand" href="#home"><span class="brand-mark">ДМ</span>Дім Млинців</a><button class="panel-close" data-close aria-label="Закрити меню"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <nav class="nav-overlay-links" aria-label="Повна навігація">
+      <a href="#home">Головна</a>
+      <a href="#menu">Меню</a>
+      <a href="#about">Про нас</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+    <div class="nav-overlay-foot">
+      <a href="https://www.instagram.com/dim.mlynciv/" target="_blank" rel="noreferrer">Instagram</a>
+      <a href="#contacts">Контакти</a>
+    </div>
+  </div>
+ 
+  <main>
+    <div class="panel" id="panel-menu" inert><div class="container">
+      <div class="panel-topbar"><a class="brand" href="#home"><span class="brand-mark">ДМ</span>Дім Млинців</a><button class="panel-close" data-close aria-label="Закрити"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+      <!-- Фото: усі шість невідповідностей закрито 13.08.2026. Кожен кадр
+           звірений із підписом на контактному листі, а не взятий за назвою
+           файлу — саме так сюди колись потрапили чизбургер під «Шоколадний
+           ранок» і салат під той самий підпис.
+             Шоколадний ранок  → млинець із шоколадом і бананом
+             Сир і шпинат      → млинець зі шпинатом і зеленню
+             Капучино          → біла чашка з молочною пінкою
+             Карамельне лате   → лате в келиху
+           Орби-супутники беруть кадри страв із JS, власних фото не мають.
+           Це стокові знімки: для релізу їх має замінити зйомка закладу. -->
+      <section class="menu-section" data-od-id="menu"><div class="section-head"><span class="eyebrow">Наше меню</span><h2>З чим сьогодні млинець?</h2><p>Солодке, солоне й кава. Від 60 грн, усе подаємо теплим.</p></div><div class="menu-filter" role="group" aria-label="Категорії меню">
+        <button type="button" class="chip is-on" data-filter="all" aria-pressed="true">Усе</button>
+        <button type="button" class="chip" data-filter="sweet" aria-pressed="false">Солодке</button>
+        <button type="button" class="chip" data-filter="savoury" aria-pressed="false">Солоне</button>
+        <button type="button" class="chip" data-filter="coffee" aria-pressed="false">Кава</button>
+      </div>
+      <p class="menu-count" id="menuCount" role="status" aria-live="polite"></p>
+      <!-- Кадри страв БЕЗ loading="lazy". Сцена показує одну картку за раз,
+           решта лежать поруч і в кадр не потрапляють, тож браузер не бачив
+           причини їх качати: з 15 знімків завантажувались 3, а решта
+           починали їхати аж у мить, коли на них гортали. До того тарілка
+           стояла порожня — власник бачив саме це. Тут lazy шкодить; на
+           фото «Про нас» нижче по сторінці воно лишається. -->
+      <div class="menu-list">
+      <article class="menu-card menu-card--reel" data-category="sweet" data-featured data-theme="1" data-hero="https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=1200&q=88"><div class="menu-card__body"><span class="menu-card__index" aria-hidden="true"></span><span class="menu-card__flag">Сьогодні радимо</span><h3>Манго-крем</h3><p>Стигле манго, вершковий крем і карамельний соус.</p><details class="addons" open><summary>Добавки</summary><ul><li><button type="button" data-addon="Нутелла й банан" data-price="113">Нутелла й банан <b>+113</b></button></li><li><button type="button" data-addon="Морозиво і фрукти" data-price="100">Морозиво і фрукти <b>+100</b></button></li><li><button type="button" data-addon="Згущене молоко з горіхами" data-price="77">Згущене молоко з горіхами <b>+77</b></button></li></ul></details><div class="menu-card__price"><strong>60 грн</strong><button class="plus" aria-label="Додати Манго-крем">+</button></div></div><div class="menu-card__plate"><img src="https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=720&q=80" alt="Млинці Манго-крем"></div></article>
+      <article class="menu-card menu-card--reel" data-category="sweet" data-featured data-theme="2" data-hero="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1200&q=88"><div class="menu-card__body"><span class="menu-card__index" aria-hidden="true"></span><h3>Ягідна хмаринка</h3><p>Пухкі панкейки, ягоди й хмарка вершків.</p><details class="addons" open><summary>Добавки</summary><ul><li><button type="button" data-addon="Творог зі згущеним молоком" data-price="125">Творог зі згущеним молоком <b>+125</b></button></li><li><button type="button" data-addon="Варення" data-price="55">Варення <b>+55</b></button></li></ul></details><div class="menu-card__price"><strong>60 грн</strong><button class="plus" aria-label="Додати Ягідну хмаринку">+</button></div></div><div class="menu-card__plate"><img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=720&q=80" alt="Панкейки з ягодами"></div></article>
+      <article class="menu-card menu-card--reel" data-category="sweet" data-featured data-theme="3" data-hero="https://images.unsplash.com/photo-1734056650036-7002ede7b8f8?auto=format&fit=crop&w=1200&q=88"><div class="menu-card__body"><span class="menu-card__index" aria-hidden="true"></span><h3>Шоколадний ранок</h3><p>Банан, шоколад і хрусткий лісовий горіх.</p><details class="addons" open><summary>Добавки</summary><ul><li><button type="button" data-addon="Нутелла" data-price="85">Нутелла <b>+85</b></button></li><li><button type="button" data-addon="Арахісова паста з бананом" data-price="93">Арахісова паста з бананом <b>+93</b></button></li></ul></details><div class="menu-card__price"><strong>60 грн</strong><button class="plus" aria-label="Додати Шоколадний ранок">+</button></div></div><div class="menu-card__plate"><img src="https://images.unsplash.com/photo-1734056650036-7002ede7b8f8?auto=format&fit=crop&w=720&q=80" alt="Млинець із шоколадом і бананом"></div></article>
+      <article class="menu-card menu-card--reel" data-category="savoury" data-theme="1"><div class="menu-card__body"><span class="menu-card__index" aria-hidden="true"></span><h3>Сир і шпинат</h3><p>Шпинат і сир у вершковому соусі. Соковито.</p><details class="addons" open><summary>Добавки</summary><ul><li><button type="button" data-addon="Куряче філе у вершковому соусі" data-price="100">Куряче філе у вершковому соусі <b>+100</b></button></li><li><button type="button" data-addon="Шинка, сир і омлет" data-price="113">Шинка, сир і омлет <b>+113</b></button></li><li><button type="button" data-addon="Лосось і вершковий сир" data-price="195">Лосось і вершковий сир <b>+195</b></button></li><li><button type="button" data-addon="Прошуто й рукола" data-price="138">Прошуто й рукола <b>+138</b></button></li></ul></details><div class="menu-card__price"><strong>60 грн</strong><button class="plus" aria-label="Додати Сир і шпинат">+</button></div></div><div class="menu-card__plate"><img src="https://images.unsplash.com/photo-1677844592730-ce9c936d8f1a?auto=format&fit=crop&w=720&q=80" alt="Млинець зі шпинатом"></div></article>
+      <article class="menu-card menu-card--reel" data-category="coffee" data-theme="2"><div class="menu-card__body"><span class="menu-card__index" aria-hidden="true"></span><h3>Капучино</h3><p>Щільна молочна пінка, під нею — гаряча кава.</p><div class="menu-card__price"><strong>65 грн</strong><button class="plus" aria-label="Додати капучино">+</button></div></div><div class="menu-card__plate"><img src="https://images.unsplash.com/photo-1611564494260-6f21b80af7ea?auto=format&fit=crop&w=720&q=80" alt="Капучино"></div></article>
+      <article class="menu-card menu-card--reel" data-category="coffee" data-theme="3"><div class="menu-card__body"><span class="menu-card__index" aria-hidden="true"></span><h3>Карамельне лате</h3><p>Кава з молоком і карамеллю — солодше за капучино.</p><div class="menu-card__price"><strong>75 грн</strong><button class="plus" aria-label="Додати карамельне лате">+</button></div></div><div class="menu-card__plate"><img src="https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format&fit=crop&w=720&q=80" alt="Карамельне лате в келиху"></div></article>
+      <!-- Непідтверджені позиції. Вони мають бейдж «чернетка» просто на
+           картці, а не ховаються в коментарі: власник має бачити, що саме
+           чекає на його назву й ціну. Чотири останні (Шинка й сир, Лосось
+           і крем-сир, Гриби й пармезан, Американо) додані 14.08.2026, щоб
+           у кожній категорії стало по п'ять позицій. -->
+      <article class="menu-card menu-card--reel" data-draft data-category="sweet" data-theme="1"><div class="menu-card__body"><span class="menu-card__index" aria-hidden="true"></span><h3>Сирники з малиною</h3><em class="menu-card__draft">чернетка</em><p>Ніжні сирники, малиновий соус і сметана.</p><div class="menu-card__price"><strong>100 грн</strong><button class="plus" aria-label="Додати Сирники з малиною">+</button></div></div><div class="menu-card__plate"><img src="https://images.unsplash.com/photo-1597990566967-a0cffc700e1a?auto=format&fit=crop&w=720&q=80" alt="Сирники з малиною й ожиною"></div></article>
+      <article class="menu-card menu-card--reel" data-draft data-category="sweet" data-theme="2"><div class="menu-card__body"><span class="menu-card__index" aria-hidden="true"></span><h3>Млинці з вишнею</h3><em class="menu-card__draft">чернетка</em><p>Кисла вишня, цукрова пудра, тепла подача.</p><div class="menu-card__price"><strong>60 грн</strong><button class="plus" aria-label="Додати Млинці з вишнею">+</button></div></div><div class="menu-card__plate"><img src="https://images.unsplash.com/photo-1637036124732-cb0fab13bb15?auto=format&fit=crop&w=720&q=80" alt="Згорнуті млинці з вишневим варенням і цукровою пудрою"></div></article>
+      <article class="menu-card menu-card--reel" data-draft data-category="savoury" data-theme="2"><div class="menu-card__body"><span class="menu-card__index" aria-hidden="true"></span><h3>Курка з грибами</h3><em class="menu-card__draft">чернетка</em><p>Млинці з куркою, печерицями й вершками.</p><div class="menu-card__price"><strong>60 грн</strong><button class="plus" aria-label="Додати Курка з грибами">+</button></div></div><div class="menu-card__plate"><img src="https://images.unsplash.com/photo-1733450198017-d1a279922aa5?auto=format&fit=crop&w=720&q=80" alt="Млинці з начинкою й зеленню на білій тарілці"></div></article>
+      <article class="menu-card menu-card--reel" data-draft data-category="savoury" data-theme="3"><div class="menu-card__body"><span class="menu-card__index" aria-hidden="true"></span><h3>Шинка й сир</h3><em class="menu-card__draft">чернетка</em><p>Класична начинка, тепла подача.</p><div class="menu-card__price"><strong>60 грн</strong><button class="plus" aria-label="Додати Шинка й сир">+</button></div></div><div class="menu-card__plate"><img src="https://images.unsplash.com/photo-1514186073652-b140ce52bcd3?auto=format&fit=crop&w=720&q=80" alt="Млинець із шинкою під розплавленим сиром"></div></article>
+      <article class="menu-card menu-card--reel" data-draft data-category="savoury" data-theme="1"><div class="menu-card__body"><span class="menu-card__index" aria-hidden="true"></span><h3>Лосось і крем-сир</h3><em class="menu-card__draft">чернетка</em><p>Слабосолений лосось, вершковий сир, кріп.</p><div class="menu-card__price"><strong>60 грн</strong><button class="plus" aria-label="Додати Лосось і крем-сир">+</button></div></div><div class="menu-card__plate"><img src="https://images.unsplash.com/photo-1577953589629-446f28f0d8c1?auto=format&fit=crop&w=720&q=80" alt="Гречаний млинець із лососем, вершковим сиром і кропом"></div></article>
+      <article class="menu-card menu-card--reel" data-draft data-category="coffee" data-theme="1"><div class="menu-card__body"><span class="menu-card__index" aria-hidden="true"></span><h3>Флет вайт</h3><em class="menu-card__draft">чернетка</em><p>Подвійне еспресо й тонка молочна пінка.</p><div class="menu-card__price"><strong>80 грн</strong><button class="plus" aria-label="Додати Флет вайт">+</button></div></div><div class="menu-card__plate"><img src="https://images.unsplash.com/photo-1593443320739-77f74939d0da?auto=format&fit=crop&w=720&q=80" alt="Флет вайт із молочним візерунком у білій чашці"></div></article>
+      <article class="menu-card menu-card--reel" data-draft data-category="coffee" data-theme="2"><div class="menu-card__body"><span class="menu-card__index" aria-hidden="true"></span><h3>Какао з зефіром</h3><em class="menu-card__draft">чернетка</em><p>Густе какао, маршмелоу, дрібка кориці.</p><div class="menu-card__price"><strong>85 грн</strong><button class="plus" aria-label="Додати Какао з зефіром">+</button></div></div><div class="menu-card__plate"><img src="https://images.unsplash.com/photo-1637572815755-c4b80092dce1?auto=format&fit=crop&w=720&q=80" alt="Какао з маршмелоу в чашці на коричневому блюдці"></div></article>
+      <article class="menu-card menu-card--reel" data-draft data-category="coffee" data-theme="1"><div class="menu-card__body"><span class="menu-card__index" aria-hidden="true"></span><h3>Американо</h3><em class="menu-card__draft">чернетка</em><p>Еспресо з гарячою водою, без молока.</p><div class="menu-card__price"><strong>55 грн</strong><button class="plus" aria-label="Додати Американо">+</button></div></div><div class="menu-card__plate"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=720&q=80" alt="Американо — чорна кава у білій чашці"></div></article>
+      <article class="menu-card menu-card--reel" data-draft data-category="savoury" data-theme="2"><div class="menu-card__body"><span class="menu-card__index" aria-hidden="true"></span><h3>Гриби й пармезан</h3><em class="menu-card__draft">чернетка</em><p>Печериці, вершки, стружка пармезану.</p><div class="menu-card__price"><strong>60 грн</strong><button class="plus" aria-label="Додати Гриби й пармезан">+</button></div></div><div class="menu-card__plate"><img src="https://images.unsplash.com/photo-1723476654474-77baaeb27012?auto=format&fit=crop&w=720&q=80" alt="Печериці у вершках зі стружкою пармезану й зеленою цибулею"></div></article>
+        <!-- Супутники: сусідні страви категорії. Кадри й підписи ставить JS
+             із самих карток — другого списку назв тут не заводимо. -->
+        <button class="menu-orb menu-orb--prev" type="button" hidden><img alt=""></button>
+        <button class="menu-orb menu-orb--next" type="button" hidden><img alt=""></button>
+        <!-- Керування лежить усередині `.menu-list`: воно позиціюється
+             абсолютно, а поруч із нею найближчий позиційований предок —
+             сама панель, і ряд стрілок вилітав за ліву межу картки. -->
+        <div class="menu-nav">
+          <button class="arrow" id="menuPrev" type="button" aria-label="Попередня страва">‹</button>
+          <button class="arrow" id="menuNext" type="button" aria-label="Наступна страва">›</button>
+          <p class="menu-nav__count"><b id="menuIndex">01</b> / <span id="menuTotal">05</span></p>
+          <p class="menu-nav__next">Далі: <b id="menuNextName"></b></p>
+        </div>
+      </div>
+      </section>
+
+      <!-- Смуга замовлення з'являється, щойно в кошику щось є. -->
+      <div class="order-bar" id="orderBar" hidden>
+        <p class="order-bar__sum"><b id="orderCount">0</b> · <b id="orderTotal">0 грн</b></p>
+        <button class="primary" id="orderOpen" type="button">Оформити <b>→</b></button>
+      </div>
+    </div></div>
+
+    <dialog class="order-dialog" id="orderDialog" aria-labelledby="orderTitle">
+      <div class="order-dialog__head">
+        <h2 id="orderTitle">Ваше замовлення</h2>
+        <button class="panel-close" id="orderClose" type="button" aria-label="Закрити">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <ul class="order-list" id="orderList"></ul>
+      <p class="order-sum">Разом <b id="orderSum">0 грн</b></p>
+      <!-- Прямо про те, як усе працює насправді: сайт не приймає оплату
+           і не має каси. Обіцяти «замовлення оформлено» було б неправдою. -->
+      <p class="order-note">Сайт не приймає оплату. Замовлення підтверджуємо
+        в Instagram — скопіюйте список і надішліть нам у повідомленні.</p>
+      <div class="order-actions">
+        <button class="primary" id="orderCopy" type="button">Скопіювати список <b>⧉</b></button>
+        <a class="order-ghost" href="https://www.instagram.com/dim.mlynciv/" target="_blank" rel="noreferrer">Відкрити Instagram</a>
+      </div>
+    </dialog>
+
+    <!-- Міні-сторінка страви. Вміст ставить JS із тієї самої картки меню,
+         що годує слайдер, — щоб опис і ціна не розійшлись у двох місцях.
+         Добавки тут не свої: кнопки переадресовують клік у справжні кнопки
+         картки, тож кошик лишається один. -->
+    <dialog class="dish-sheet" id="dishSheet" aria-labelledby="sheetTitle">
+      <button class="panel-close dish-sheet__close" id="sheetClose" type="button" aria-label="Закрити">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <img class="dish-sheet__photo" id="sheetImg" src="" alt="">
+      <div class="dish-sheet__body">
+        <span class="tag">Сьогодні радимо</span>
+        <h2 id="sheetTitle"></h2>
+        <p class="dish-sheet__desc" id="sheetDesc"></p>
+        <div class="addons" id="sheetAddons" hidden>
+          <p class="dish-sheet__label">Добавки</p>
+          <ul id="sheetAddonList"></ul>
+        </div>
+        <div class="dish-sheet__foot">
+          <strong id="sheetPrice"></strong>
+          <button class="plus" id="sheetPlus" type="button" aria-label="Додати страву">+</button>
+        </div>
+        <a class="dish-sheet__all" href="#menu" id="sheetAll">Дивитись усе меню</a>
+      </div>
+    </dialog>
+
+    <div class="panel" id="panel-about" inert><div class="container">
+      <div class="panel-topbar"><a class="brand" href="#home"><span class="brand-mark">ДМ</span>Дім Млинців</a><button class="panel-close" data-close aria-label="Закрити"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+      <section data-od-id="about"><div class="about-grid"><div class="about-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1100&q=85" alt="Затишна атмосфера Дому Млинців"></div><div class="about-copy"><span class="eyebrow">Про нас</span><h2>Місце для теплих зустрічей</h2><p>Дім Млинців — локальна кав'ярня в Ужгороді, де можна зайти на ранкову каву, забрати млинці із собою або неквапливо посидіти з рідними.</p><div class="facts"><div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2"/></svg><div><strong>вул. Івана Франка, 56</strong><span>Ужгород</span></div></div><div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><strong id="aboutHoursWeek">пн–пт 08:00–19:00</strong><span id="aboutHoursWeekend">сб–нд 10:00–17:00</span></div></div></div></div>
+        <div class="about-strip">
+          <div class="day" id="dayBox">
+            <div class="day__dial" id="dayDial" style="--dial:0"><span id="dayClock">—</span><small id="dayHint"></small></div>
+            <div class="day__text"><strong id="dayStatus">Години роботи</strong><span id="dayDetail"></span></div>
+          </div>
+          <ol class="week" id="weekList"></ol>
+          <ul class="about-figures" id="aboutFigures"></ul>
+        </div>
+      </div></section>
+      <div class="panel-foot"><span>Дім Млинців · Ужгород</span><span><a href="https://www.instagram.com/dim.mlynciv/" target="_blank" rel="noreferrer">Instagram</a> · <a href="#menu">Переглянути меню</a></span></div>
+    </div></div>
+ 
+    <div class="panel" id="panel-contacts" inert><div class="container">
+      <div class="panel-topbar"><a class="brand" href="#home"><span class="brand-mark">ДМ</span>Дім Млинців</a><button class="panel-close" data-close aria-label="Закрити"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+      <section class="contacts" data-od-id="contacts"><div class="contact-grid"><div><span class="eyebrow">Контакти</span><h2>Завітаєте<br>сьогодні?</h2><p>Напишіть нам у соціальних мережах або приходьте за млинцями — ми поруч у центрі Ужгорода.</p><div class="contact-actions"><a class="primary" href="#menu">Обрати страву<b>→</b></a><a class="order-ghost" href="https://www.instagram.com/dim.mlynciv/" target="_blank" rel="noreferrer">Instagram</a></div></div><div class="contact-box"><small>Знайдіть нас</small><a href="https://www.instagram.com/dim.mlynciv/" target="_blank" rel="noreferrer"><svg width="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>@dim.mlynciv</a><a href="https://www.google.com/maps/search/?api=1&query=вул.+Івана+Франка+56,+Ужгород" target="_blank" rel="noreferrer"><svg width="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2"/></svg>вул. Івана Франка, 56, Ужгород</a><div class="contact-line"><svg width="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><strong id="contactStatus">Години роботи</strong><small id="contactHours">пн–пт 08:00–19:00</small></div></div></div></div></section>
+      <footer class="site-footer"><div class="container"><div class="footer-inner"><strong>Дім Млинців</strong><span>© 2026 · Ужгород</span></div></div></footer>
+    </div></div>
+
+  </main>
+  <!-- Порожній src — не помилка, а заготовка: у #sheetImg і в орбах-супутниках
+       кадр ставить JS пізніше. Без цієї перевірки обробник спрацьовував одразу
+       на завантаженні й назавжди клеїв .image-fallback, а той градієнт потім
+       лежав під справжнім знімком. -->
+  <script>document.querySelectorAll('img').forEach(img=>img.addEventListener('error',()=>{if(!img.getAttribute('src'))return;img.classList.add('image-fallback');img.removeAttribute('src')}));</script>
+  <script>
+    (function(){
+      const toggle = document.getElementById('menuToggle');
+      const overlay = document.getElementById('navOverlay');
+      const panels = {
+        menu: document.getElementById('panel-menu'),
+        about: document.getElementById('panel-about'),
+        contacts: document.getElementById('panel-contacts')
+      };
+      let activePanel = null;
+      let lastFocus = null;   // куди повернути фокус після закриття
+
+      // Прокрутку сторінки блокуємо тільки поки зверху лежить панель або
+      // оверлей, і запам'ятовуємо позицію: інакше після закриття сторінка
+      // опиняється на початку.
+      let lockedAt = 0;
+      function lockScroll(){
+        if(document.body.classList.contains('panel-open')) return;
+        lockedAt = window.scrollY;
+        const bar = window.innerWidth - document.documentElement.clientWidth;
+        document.body.style.setProperty('--scrollbar-w', bar + 'px');
+        document.body.classList.add('panel-open');
+      }
+      function unlockScroll(){
+        if(!document.body.classList.contains('panel-open')) return;
+        document.body.classList.remove('panel-open');
+        window.scrollTo({top: lockedAt, behavior: 'auto'});
+      }
+
+      // Перший фокусований елемент усередині — щоб клавіатура одразу
+      // опинилась у щойно відкритому шарі, а не лишалась позаду нього.
+      function focusInside(root){
+        const el = root.querySelector(
+          'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if(el) el.focus({preventScroll: true});
+      }
+      function restoreFocus(){
+        if(lastFocus && document.contains(lastFocus)) lastFocus.focus({preventScroll: true});
+        lastFocus = null;
+      }
+
+      function openOverlay(){
+        lastFocus = document.activeElement;
+        overlay.classList.add('is-open');
+        overlay.removeAttribute('inert');
+        toggle.classList.add('is-open');
+        toggle.setAttribute('aria-expanded','true');
+        toggle.setAttribute('aria-label','Закрити меню');
+        lockScroll();
+        focusInside(overlay);
+      }
+      function closeOverlay(opts){
+        const wasOpen = overlay.classList.contains('is-open');
+        overlay.classList.remove('is-open');
+        overlay.setAttribute('inert','');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded','false');
+        toggle.setAttribute('aria-label','Відкрити меню');
+        if(!activePanel) unlockScroll();
+        if(wasOpen && !(opts && opts.keepFocus)) restoreFocus();
+      }
+
+      function openPanel(name, opts){
+        const panel = panels[name];
+        if(!panel || activePanel === panel) return;
+        const source = document.activeElement;
+        // keepFocus: фокус піде в панель, повертати його в шапку не треба.
+        closeOverlay({keepFocus: true});
+        // Перехід «меню → контакти» лишав відкритими обидві панелі.
+        closeAllPanels({keepFocus: true});
+        if(!lastFocus) lastFocus = source;
+        panel.classList.add('is-open');
+        panel.removeAttribute('inert');
+        panel.scrollTop = 0;
+        activePanel = panel;
+        lockScroll();
+        // На першому завантаженні за прямим посиланням фокус не переносимо:
+        // це було б стрибком без дії користувача.
+        if(!(opts && opts.silent)) focusInside(panel);
+      }
+      function closeAllPanels(opts){
+        const wasOpen = !!activePanel;
+        Object.values(panels).forEach(p => {
+          p.classList.remove('is-open');
+          p.setAttribute('inert','');
+        });
+        activePanel = null;
+        if(!(opts && opts.keepFocus)){
+          if(!overlay.classList.contains('is-open')) unlockScroll();
+          if(wasOpen) restoreFocus();
+        }
+      }
+
+      toggle.addEventListener('click', () => {
+        if(overlay.classList.contains('is-open')){ closeOverlay(); }
+        else { closeAllPanels(); openOverlay(); }
+      });
+
+      // --- Адресація станів --------------------------------------------
+      // Розділ — це адреса. Панелі відкриває hash, а не самі обробники:
+      // так безкоштовно працює кнопка «назад», посилання на /#menu можна
+      // надіслати, а аналітика бачить окремі перегляди.
+      const HOME = '#home';
+
+      function panelFromHash(){
+        const name = location.hash.slice(1);
+        return panels[name] ? name : null;
+      }
+      const navPill = document.querySelector('.nav-pill');
+
+      function movePill(){
+        const active = document.querySelector('.nav a.active');
+        if(!navPill || !active) { if(navPill) navPill.style.opacity = '0'; return; }
+        // Читаємо позицію з самого пункту: не треба дублювати геометрію
+        // в CSS і тримати її синхронною з паддінгами.
+        navPill.style.width = active.offsetWidth + 'px';
+        navPill.style.translate = active.offsetLeft + 'px 0';
+        navPill.style.opacity = '1';
+      }
+
+      function markActive(name){
+        document.querySelectorAll('.nav a').forEach(a => {
+          const target = (a.getAttribute('href') || '').slice(1);
+          const on = name ? target === name : (target === 'home' || target === '');
+          a.classList.toggle('active', on);
+          if(on) a.setAttribute('aria-current', 'page');
+          else a.removeAttribute('aria-current');
+        });
+        movePill();
+      }
+
+      // Ширина пунктів залежить від шрифту: до його завантаження позиція
+      // порахувалась би за запасним і поїхала б.
+      addEventListener('resize', movePill);
+      if(document.fonts && document.fonts.ready) document.fonts.ready.then(movePill);
+      function syncFromHash(opts){
+        const name = panelFromHash();
+        if(name) openPanel(name, opts); else closeAllPanels();
+        closeOverlay({keepFocus: true});
+        markActive(name);
+      }
+
+      addEventListener('hashchange', () => syncFromHash());
+
+      // Кнопки закриття — не посилання, тому переводимо адресу самі.
+      document.querySelectorAll('button[data-close]').forEach(el => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          if(location.hash && location.hash !== HOME) location.hash = HOME;
+          else { closeOverlay(); closeAllPanels(); }
+        });
+      });
+ 
+      document.addEventListener('keydown', (e) => {
+        if(e.key !== 'Escape') return;
+        // <dialog> закривається сам; якщо не вийти тут, Esc закрив би заразом
+        // і діалог замовлення, і панель під ним.
+        const dialog = document.querySelector('dialog[open]');
+        if(dialog) return;
+        if(overlay.classList.contains('is-open')) closeOverlay();
+        else if(activePanel) location.hash = HOME;
+      });
+
+      // Стан із адреси на завантаженні: /#menu має одразу показати меню.
+      syncFromHash({silent: true});
+    })();
+  </script>
+ 
+  <script>
+    // Перемикач теми: система → світла → темна → система.
+    // Три стани, а не два: інакше з ручного вибору немає дороги назад до
+    // системного, і сайт назавжди лишається розсинхронізованим із пристроєм.
+    (function(){
+      const btn = document.getElementById('themeToggle');
+      if(!btn) return;
+      const KEY = 'dm-theme';
+      const ORDER = ['auto', 'light', 'dark'];
+      const LABEL = {
+        auto:  'Тема: як у системі. Перемкнути на світлу',
+        light: 'Тема: світла. Перемкнути на темну',
+        dark:  'Тема: темна. Повернути як у системі',
+      };
+      // theme-color у <meta> має медіазапити й за ручним вибором не піде —
+      // оновлюємо колір панелі браузера самі.
+      const BAR = {light: '#9E5C42', dark: '#1A1210'};
+
+      let state = 'auto';
+      try{
+        const saved = localStorage.getItem(KEY);
+        if(saved === 'light' || saved === 'dark') state = saved;
+      }catch(e){}
+
+      function effective(){
+        if(state !== 'auto') return state;
+        return matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      function paint(){
+        if(state === 'auto') delete document.documentElement.dataset.theme;
+        else document.documentElement.dataset.theme = state;
+        btn.dataset.state = state;
+        btn.setAttribute('aria-label', LABEL[state]);
+        document.querySelectorAll('meta[name="theme-color"]')
+          .forEach(m => m.setAttribute('content', BAR[effective()]));
+      }
+
+      btn.addEventListener('click', () => {
+        state = ORDER[(ORDER.indexOf(state) + 1) % ORDER.length];
+        try{
+          if(state === 'auto') localStorage.removeItem(KEY);
+          else localStorage.setItem(KEY, state);
+        }catch(e){}
+        paint();
+      });
+
+      // У режимі «як у системі» слідкуємо за перемиканням теми на пристрої.
+      matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        if(state === 'auto') paint();
+      });
+
+      paint();
+    })();
+  </script>
+
+  <script>
+    // Категорії меню. Шість позицій без структури — ще не проблема, але
+    // підзаголовок секції обіцяє «солодке, солоне та кава», і до цих трьох
+    // груп має бути як дійти.
+    (function(){
+      const chips = [...document.querySelectorAll('.menu-filter .chip')];
+      const cards = [...document.querySelectorAll('.menu-card')];
+      const count = document.getElementById('menuCount');
+      if(!chips.length || !cards.length) return;
+
+      function plural(n){
+        const one = n % 10, ten = n % 100;
+        if(one === 1 && ten !== 11) return 'страва';
+        if(one >= 2 && one <= 4 && (ten < 12 || ten > 14)) return 'страви';
+        return 'страв';
+      }
+
+      // --- Сцена меню ------------------------------------------------------
+      // Одна страва в кадрі. Категорія обирається чипсом, страва в межах
+      // категорії — стрілками, як слайдер на герої. Картки лишаються в
+      // розмітці всі: їх бачить пошук, на них висять слухачі кошика.
+      const stage = document.querySelector('.menu-list');
+      const reels = [...document.querySelectorAll('.menu-card--reel')];
+      const prevBtn = document.getElementById('menuPrev');
+      const nextBtn = document.getElementById('menuNext');
+      const idxEl = document.getElementById('menuIndex');
+      const totalEl = document.getElementById('menuTotal');
+      const nextNameEl = document.getElementById('menuNextName');
+      const orbs = {
+        '-1': document.querySelector('.menu-orb--prev'),
+        '1': document.querySelector('.menu-orb--next'),
+      };
+      const pad = n => String(n).padStart(2, '0');
+      const nameOf = card => card.querySelector('h3').textContent.trim();
+
+      // «+» перетворюємо на підписану дію: у сцені це головна кнопка сторінки.
+      for(const card of reels){
+        const plus = card.querySelector('.plus');
+        if(plus) plus.textContent = 'Додати';
+      }
+      let pool = reels.slice();
+      let at = 0;
+      let busy = false;
+
+      function setOrb(dir, card){
+        const btn = orbs[String(dir)];
+        if(!btn) return;
+        const img = card && card.querySelector('.menu-card__plate img');
+        // У чернетки кадру немає — супутник просто не з'являється, а не
+        // показує порожній кружок.
+        btn.hidden = !img || pool.length < 2;
+        if(btn.hidden) return;
+        btn.querySelector('img').src = img.src;
+        btn.setAttribute('aria-label', 'Перейти до страви: ' + nameOf(card));
+      }
+
+      function paint(){
+        for(const card of reels) card.hidden = true;
+        const card = pool[at];
+        if(!card) return;
+        card.hidden = false;
+        const el = card.querySelector('.menu-card__index');
+        if(el) el.textContent = pad(at + 1) + ' / ' + pad(pool.length);
+        idxEl.textContent = pad(at + 1);
+        totalEl.textContent = pad(pool.length);
+        const nxt = pool[(at + 1) % pool.length];
+        const prv = pool[(at - 1 + pool.length) % pool.length];
+        nextNameEl.textContent = pool.length > 1 ? nameOf(nxt) : '—';
+        setOrb(1, nxt);
+        void prv;   // супутник «назад» прибрано з композиції свідомо
+        prevBtn.disabled = nextBtn.disabled = pool.length < 2;
+      }
+
+      // Перехід між стравами.
+      //
+      // Було віяло на класах: усе гасне за 300 мс, JS міняє вміст, шари
+      // в'їжджають з протилежного боку. Вада в тому, що між «згасло» і
+      // «в'їхало» картка стоїть **порожня** — на знімку це видно як
+      // провал на 120 мс, і саме він читався як дешевий блимок.
+      //
+      // Тепер тим самим інструментом, що й переліт кадру в міні-сторінку
+      // страви: браузер знімає старий і новий стани й змішує їх сам, тож
+      // порожнього кадру не буває взагалі. Тарілка й назва мають власні
+      // імена переходу, тож не перетікають одне в одне.
+      const OUT = 300;
+      const noMotion = matchMedia('(prefers-reduced-motion: reduce)');
+
+      function swapTo(dir){
+        at = (at + dir + pool.length) % pool.length;
+        paint();
+      }
+
+      // Запасний шлях: старе віяло. Лишається для браузерів без View
+      // Transitions і для вимкненого руху.
+      function goFan(dir){
+        stage.style.setProperty('--shift', dir);
+        stage.classList.add('is-changing');
+        setTimeout(() => {
+          swapTo(dir);
+          stage.classList.remove('is-changing');
+          stage.classList.add('is-entering');
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            stage.classList.remove('is-entering');
+            busy = false;
+          }));
+        }, OUT);
+      }
+
+      function go(dir){
+        if(busy || pool.length < 2) return;
+        busy = true;
+        if(noMotion.matches){ swapTo(dir); busy = false; return; }
+        if(!document.startViewTransition){ goFan(dir); return; }
+        // Напрямок віддаємо в CSS через корінь: псевдоелементи переходу
+        // висять саме на ньому, і до атрибута на .menu-list їм не дотягнутись.
+        const root = document.documentElement;
+        root.dataset.dish = dir > 0 ? 'next' : 'prev';
+        const t = document.startViewTransition(() => swapTo(dir));
+        // `ready` відхиляється, коли браузер пропускає перехід — зокрема
+        // в прихованій вкладці, за специфікацією. Обмін при цьому
+        // відбувається, тому глушимо: без цього в консоль летить
+        // необроблена InvalidStateError, а її рахує check.py.
+        t.ready.catch(() => {});
+        t.finished.catch(() => {}).finally(() => {
+          delete root.dataset.dish;
+          busy = false;
+        });
+      }
+
+      function apply(filter){
+        pool = filter === 'all'
+          ? reels.slice()
+          : reels.filter(c => c.dataset.category === filter);
+        at = 0;
+        paint();
+        for(const chip of chips){
+          const on = chip.dataset.filter === filter;
+          chip.classList.toggle('is-on', on);
+          chip.setAttribute('aria-pressed', String(on));
+        }
+        // Озвучуємо результат: інакше зміна списку лишається невидимою
+        // для того, хто не бачить екрана.
+        count.textContent = filter === 'all'
+          ? `${pool.length} ${plural(pool.length)} у меню`
+          : `${pool.length} ${plural(pool.length)} у категорії`;
+      }
+
+      // Лічильник на кожному чипсі. Рахуємо з розмітки один раз: список
+      // страв статичний, а число, взяте з коду, розійшлося б із меню при
+      // першій же доданій позиції.
+      for(const chip of chips){
+        const f = chip.dataset.filter;
+        const n = f === 'all'
+          ? reels.length
+          : reels.filter(c => c.dataset.category === f).length;
+        const b = document.createElement('b');
+        b.textContent = n;
+        b.setAttribute('aria-hidden', 'true');   // озвучує #menuCount
+        chip.append(b);
+      }
+
+      chips.forEach(chip => chip.addEventListener('click',
+        () => apply(chip.dataset.filter)));
+      nextBtn.addEventListener('click', () => go(1));
+      prevBtn.addEventListener('click', () => go(-1));
+      for(const [dir, btn] of Object.entries(orbs))
+        btn.addEventListener('click', () => go(+dir));
+
+      // Клавіатура: стрілками гортати природно, і це безкоштовно.
+      document.getElementById('panel-menu').addEventListener('keydown', (e) => {
+        if(e.key === 'ArrowRight') go(1);
+        else if(e.key === 'ArrowLeft') go(-1);
+      });
+
+      paint();
+
+      // Числа для «Про нас» рахуються з меню, а не вписуються руками:
+      // додана страва чи змінена ціна оновлять їх самі, і сторінка не
+      // почне обіцяти те, чого в меню вже немає.
+      (function(){
+        const box = document.getElementById('aboutFigures');
+        const reels = [...document.querySelectorAll('.menu-card--reel')];
+        if(!box || !reels.length) return;
+        const money = el => parseInt((el.textContent || '').replace(/\D+/g, ''), 10) || 0;
+        const prices = reels
+          .map(c => money(c.querySelector('.menu-card__price strong')))
+          .filter(Boolean);
+        const addons = [...document.querySelectorAll('.menu-card .addons button')]
+          .map(b => +b.dataset.price || 0).filter(Boolean);
+
+        const dishWord = n => {
+          const one = n % 10, ten = n % 100;
+          if(one === 1 && ten !== 11) return 'страва в меню';
+          if(one >= 2 && one <= 4 && (ten < 12 || ten > 14)) return 'страви в меню';
+          return 'страв у меню';
+        };
+        // Рахуємо тільки підтверджені позиції: чернетка ще не страва, і
+        // ставити її ціну як «від N грн» означало б обіцяти неіснуюче.
+        const real = reels.filter(c => !c.hasAttribute('data-draft'));
+        const realPrices = real
+          .map(c => money(c.querySelector('.menu-card__price strong')))
+          .filter(Boolean);
+        const rows = [[real.length, dishWord(real.length)]];
+        if(realPrices.length) rows.push(['від ' + Math.min(...realPrices) + ' грн', 'ціна страви']);
+        if(addons.length) rows.push([addons.length + ' добавок', 'від ' + Math.min(...addons) + ' грн']);
+        void prices;
+
+        box.replaceChildren(...rows.map(([value, label]) => {
+          const li = document.createElement('li');
+          const b = document.createElement('b');
+          b.textContent = value;
+          const s = document.createElement('span');
+          s.textContent = label;
+          li.append(b, s);
+          return li;
+        }));
+      })();
+
+      // Позначки складу — тільки якщо власник їх заповнив.
+      for(const card of cards){
+        const marks = (card.dataset.marks || '').split(',')
+          .map(m => m.trim()).filter(Boolean);
+        if(!marks.length) continue;
+        const ul = document.createElement('ul');
+        ul.className = 'menu-card__marks';
+        for(const m of marks){
+          const li = document.createElement('li');
+          li.textContent = m;
+          ul.append(li);
+        }
+        card.querySelector('.menu-card__price').before(ul);
+      }
+    })();
+  </script>
+
+  <script>
+    // Замовлення. Кнопки «+» роками нічого не робили — порожня кнопка гірша
+    // за її відсутність. Каси й бекенду немає, тож кошик живе на пристрої,
+    // а підтвердження йде в Instagram; інтерфейс каже про це прямо.
+    (function(){
+      const KEY = 'dm-order';
+      const bar = document.getElementById('orderBar');
+      const dialog = document.getElementById('orderDialog');
+      if(!bar || !dialog) return;
+
+      const cards = [...document.querySelectorAll('.menu-card')];
+      const catalog = new Map(cards.map(card => [
+        card.querySelector('h3').textContent.trim(),
+        {
+          card,
+          price: parseInt(card.querySelector('.menu-card__price strong')
+            .textContent.replace(/\D/g, ''), 10) || 0,
+        },
+      ]));
+
+      let cart = {};
+      try { cart = JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e) { cart = {}; }
+      // Страва могла зникнути з меню, поки кошик лежав у пам'яті пристрою.
+      Object.keys(cart).forEach(k => { if(!catalog.has(k)) delete cart[k]; });
+
+      const money = n => n + ' грн';
+      const items = () => Object.entries(cart).filter(([, q]) => q > 0);
+      const total = () => items().reduce((s, [k, q]) => s + catalog.get(k).price * q, 0);
+      const count = () => items().reduce((s, [, q]) => s + q, 0);
+
+      function plural(n){
+        const one = n % 10, ten = n % 100;
+        if(one === 1 && ten !== 11) return 'позиція';
+        if(one >= 2 && one <= 4 && (ten < 12 || ten > 14)) return 'позиції';
+        return 'позицій';
+      }
+
+      function save(){
+        try { localStorage.setItem(KEY, JSON.stringify(cart)); } catch(e) {}
+      }
+
+      function paint(){
+        const n = count();
+        bar.hidden = n === 0;
+        const count_ = document.getElementById('orderCount');
+        const totalEls = [document.getElementById('orderTotal'),
+                          document.getElementById('orderSum')];
+        count_.textContent = n + ' ' + plural(n);
+        totalEls.forEach(el => { el.textContent = money(total()); });
+        // Перекочування суми: елементи не перестворюються, тож анімацію
+        // перемотуємо вручну — інакше вона спрацює лише раз.
+        for(const el of [count_, ...totalEls])
+          for(const a of el.getAnimations()){ a.cancel(); a.play(); }
+
+        catalog.forEach((entry, name) => {
+          const qty = cart[name] || 0;
+          // Позиції з добавкою підсвічують свою кнопку в списку, а не «+».
+          if(entry.addonBtn){ entry.addonBtn.classList.toggle('is-added', qty > 0); return; }
+          const btn = entry.card.querySelector('.plus');
+          btn.classList.toggle('is-added', qty > 0);
+          btn.setAttribute('aria-label',
+            qty > 0 ? `${name}: у замовленні ${qty}, додати ще` : `Додати ${name}`);
+          let badge = entry.card.querySelector('.menu-card__count');
+          if(qty > 0){
+            if(!badge){
+              badge = document.createElement('span');
+              badge.className = 'menu-card__count';
+              btn.before(badge);
+            }
+            badge.textContent = '×' + qty;
+          } else if(badge){ badge.remove(); }
+        });
+
+        const list = document.getElementById('orderList');
+        list.innerHTML = '';
+        for(const [name, qty] of items()){
+          const li = document.createElement('li');
+          const sum = catalog.get(name).price * qty;
+          li.innerHTML = `<span>${name}</span>
+            <button type="button" data-less="${name}" aria-label="Прибрати одну ${name}">−</button>
+            <span class="qty">${qty}</span>
+            <button type="button" data-more="${name}" aria-label="Додати ще одну ${name}">+</button>
+            <span>${money(sum)}</span>`;
+          list.append(li);
+        }
+        document.getElementById('orderCopy').disabled = count() === 0;
+      }
+
+      function change(name, delta){
+        cart[name] = Math.max(0, (cart[name] || 0) + delta);
+        if(!cart[name]) delete cart[name];
+        save(); paint();
+      }
+
+      cards.forEach(card => {
+        const name = card.querySelector('h3').textContent.trim();
+        card.querySelector('.plus').addEventListener('click', () => change(name, 1));
+
+        // Ціна бази підписується «від N грн» там, де є добавки: інакше
+        // виходить, що начинка вже в назві, а за неї ще доплачують.
+        const priceEl = card.querySelector('.menu-card__price strong');
+        if(card.querySelector('.addons') && !/^від /.test(priceEl.textContent))
+          priceEl.textContent = 'від ' + priceEl.textContent;
+
+        // Добавка кладеться окремою позицією «страва · добавка» за ціною
+        // бази плюс добавки — так у кошику видно, за що саме платять.
+        card.querySelectorAll('.addons button').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const addon = btn.dataset.addon;
+            const key = name + ' · ' + addon;
+            if(!catalog.has(key)){
+              catalog.set(key, {
+                card,
+                price: catalog.get(name).price + (+btn.dataset.price || 0),
+                addonBtn: btn,
+              });
+            }
+            change(key, 1);
+          });
+        });
+      });
+      document.getElementById('orderList').addEventListener('click', (e) => {
+        const more = e.target.closest('[data-more]'), less = e.target.closest('[data-less]');
+        if(more) change(more.dataset.more, 1);
+        if(less) change(less.dataset.less, -1);
+      });
+
+      document.getElementById('orderOpen').addEventListener('click', () => dialog.showModal());
+      document.getElementById('orderClose').addEventListener('click', () => dialog.close());
+
+      document.getElementById('orderCopy').addEventListener('click', async (e) => {
+        const text = 'Замовлення в «Дім Млинців»:\n'
+          + items().map(([n, q]) => `· ${n} × ${q} — ${money(catalog.get(n).price * q)}`).join('\n')
+          + `\nРазом: ${money(total())}`;
+        const btn = e.currentTarget;
+        try {
+          await navigator.clipboard.writeText(text);
+          btn.firstChild.textContent = 'Скопійовано ';
+          setTimeout(() => { btn.firstChild.textContent = 'Скопіювати список '; }, 2000);
+        } catch(err){
+          // Буфер обміну недоступний (немає https або відмовили в доступі) —
+          // показуємо текст, щоб замовлення все одно можна було забрати.
+          window.prompt('Скопіюйте список замовлення:', text);
+        }
+      });
+
+      // «Замовити» в шапці веде в меню — там і живе кошик.
+      paint();
+    })();
+  </script>
+
+  <script>
+    // Години роботи — одне джерело правди. Раніше в героя був зашитий рядок
+    // «Відчинено сьогодні · пн–пт 08:00–19:00»: у неділю ввечері сайт
+    // стверджував, що відчинено, і показував будній графік, хоча в «Про нас»
+    // стояло «сб–нд 10:00–17:00».
+    (function(){
+      const SCHEDULE = {           // день тижня → [відкриття, закриття] у годинах
+        1: [8, 19], 2: [8, 19], 3: [8, 19], 4: [8, 19], 5: [8, 19],
+        6: [10, 17], 0: [10, 17],
+      };
+      const DAYS = ['неділя','понеділок','вівторок','середа','четвер','пʼятниця','субота'];
+      const SHORT = ['нд','пн','вт','ср','чт','пт','сб'];
+
+      // Час закладу, а не відвідувача: гість із Варшави має бачити київський.
+      function kyiv(){
+        const parts = new Intl.DateTimeFormat('en-GB', {
+          timeZone: 'Europe/Kyiv', weekday: 'short',
+          hour: '2-digit', minute: '2-digit', hour12: false,
+        }).formatToParts(new Date());
+        const get = t => parts.find(p => p.type === t).value;
+        const idx = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+        return {day: idx, minutes: +get('hour') * 60 + +get('minute')};
+      }
+      const hhmm = h => String(h).padStart(2, '0') + ':00';
+
+      function status(){
+        const {day, minutes} = kyiv();
+        const today = SCHEDULE[day];
+        if(today && minutes < today[1] * 60){
+          if(minutes >= today[0] * 60)
+            return {open: true, label: 'Відчинено', detail: 'сьогодні до ' + hhmm(today[1])};
+          return {open: false, label: 'Зачинено', detail: 'відкриємось о ' + hhmm(today[0])};
+        }
+        for(let i = 1; i <= 7; i++){
+          const d = (day + i) % 7, next = SCHEDULE[d];
+          if(!next) continue;
+          const when = i === 1 ? 'завтра' : ('у ' + DAYS[d]);
+          return {open: false, label: 'Зачинено', detail: when + ' з ' + hhmm(next[0])};
+        }
+        return {open: false, label: 'Зачинено', detail: 'графік уточнюється'};
+      }
+
+      // Однакові дні збираємо в діапазон: «пн–пт 08:00–19:00».
+      function ranges(){
+        const order = [1,2,3,4,5,6,0], out = [];
+        for(const d of order){
+          const h = SCHEDULE[d];
+          if(!h) continue;
+          const last = out[out.length - 1];
+          if(last && last.h[0] === h[0] && last.h[1] === h[1]) last.days.push(d);
+          else out.push({days: [d], h});
+        }
+        return out.map(r => {
+          const span = r.days.length > 1
+            ? SHORT[r.days[0]] + '–' + SHORT[r.days[r.days.length - 1]]
+            : SHORT[r.days[0]];
+          return span + ' ' + hhmm(r.h[0]) + '–' + hhmm(r.h[1]);
+        });
+      }
+
+      function paint(){
+        const st = status(), rs = ranges();
+        const set = (id, text) => {
+          const el = document.getElementById(id);
+          if(el && text) el.textContent = text;
+        };
+        set('hoursStatus', st.label);
+        set('hoursDetail', st.detail);
+        set('aboutHoursWeek', rs[0]);
+        set('aboutHoursWeekend', rs[1] || '');
+        set('contactStatus', st.label + ' · ' + st.detail);
+        set('contactHours', rs.join(' · '));
+        const box = document.querySelector('.hours');
+        if(box) box.classList.toggle('is-closed', !st.open);
+        paintDay(st);
+      }
+
+      // Кільце робочого дня й тиждень у «Про нас» — з того самого розкладу.
+      // Нічого не вписуємо руками: усе це вже пораховано вище.
+      function paintDay(st){
+        const week = document.getElementById('weekList');
+        const dial = document.getElementById('dayDial');
+        if(!week || !dial) return;
+        const {day, minutes} = kyiv();
+        const order = [1,2,3,4,5,6,0];
+
+        if(!week.children.length){
+          week.replaceChildren(...order.map(d => {
+            const li = document.createElement('li');
+            const h = SCHEDULE[d];
+            const b = document.createElement('b');
+            b.textContent = SHORT[d];
+            const s = document.createElement('span');
+            s.textContent = h ? hhmm(h[0]) + '–' + hhmm(h[1]) : 'вихідний';
+            if(!h) li.classList.add('is-off');
+            li.append(b, s);
+            return li;
+          }));
+        }
+        [...week.children].forEach((li, i) =>
+          li.classList.toggle('is-today', order[i] === day));
+
+        const today = SCHEDULE[day];
+        const left = today ? today[1] * 60 - minutes : 0;
+        const share = today && st.open
+          ? (minutes - today[0] * 60) / (today[1] * 60 - today[0] * 60) : 0;
+        dial.style.setProperty('--dial', Math.min(1, Math.max(0, share)).toFixed(3));
+        // «10 год» саме по собі не каже нічого — 10 годин чого? Тепер
+        // підпис під кільцем пояснює: це залишок робочого дня.
+        document.getElementById('dayClock').textContent = !st.open ? '—'
+          : left >= 60 ? Math.round(left / 60) + ' год' : Math.max(1, left) + ' хв';
+        const hint = document.getElementById('dayHint');
+        if(hint) hint.textContent = st.open ? 'до закриття' : 'зачинено';
+        document.getElementById('dayStatus').textContent = st.label;
+        document.getElementById('dayDetail').textContent = st.detail;
+        document.getElementById('dayBox').classList.toggle('is-closed', !st.open);
+      }
+
+      paint();
+      // Сторінку кав'ярні тримають відкритою довго — стан має встигати
+      // змінитись разом із годинником.
+      setInterval(paint, 60000);
+
+      // Кільце наливається на очах при кожному відкритті «Про нас»: на
+      // завантаженні сторінки цей рух відбувається за зачиненою панеллю,
+      // і його ніхто не бачить.
+      addEventListener('hashchange', () => {
+        const dial = document.getElementById('dayDial');
+        if(location.hash !== '#about' || !dial) return;
+        dial.style.setProperty('--dial', 0);
+        requestAnimationFrame(() => requestAnimationFrame(paint));
+      });
+    })();
+  </script>
+
+  <script>
+    (function(){
+      // Страви живуть у розмітці меню — там їх бачить і пошук, і читач без JS.
+      // Слайдер читає їх звідти, а не тримає власну копію: раніше назва, опис
+      // і ціна кожної страви лежали у двох місцях і вже встигли розійтись
+      // («Манго, ніжний крем і карамель» проти «Манго, крем і карамельний соус»).
+      const dishes = [...document.querySelectorAll('.menu-card[data-featured]')]
+        .map(card => ({
+          card,
+          theme: card.dataset.theme || '1',
+          plate: card.dataset.hero || card.querySelector('img').src,
+          flavor: card.querySelector('img').src,
+          title: card.querySelector('h3').textContent.trim(),
+          desc: card.querySelector('p').textContent.trim(),
+          price: card.querySelector('.menu-card__price strong').textContent.trim(),
+        }));
+      if(!dishes.length) return;
+
+      let current = 0;
+      let animating = false;
+ 
+      const hero = document.querySelector('.hero');
+      const dishImg = document.getElementById('dishImg');
+      const flavorImg = document.getElementById('dishFlavorImg');
+      const title = document.getElementById('dishTitle');
+      const desc = document.getElementById('dishDesc');
+      const price = document.getElementById('dishPrice');
+      const grid = document.querySelector('.hero-grid');
+      const orbs = [...document.querySelectorAll('.orb img')];
+      const indexEl = document.getElementById('dishIndex');
+      const totalEl = document.getElementById('dishTotal');
+      const nextBtn = document.getElementById('dishNext');
+      const prevBtn = document.getElementById('dishPrev');
+ 
+      function render(i, instant){
+        const d = dishes[i];
+        setTheme(i);
+        dishImg.src = d.plate;
+        dishImg.alt = d.title;
+        flavorImg.src = d.flavor;
+        flavorImg.alt = d.title;
+        title.textContent = d.title;
+        desc.textContent = d.desc;
+        price.textContent = d.price;
+        indexEl.textContent = String(i + 1).padStart(2, '0');
+        totalEl.textContent = String(dishes.length).padStart(2, '0');
+
+        // Мітка й цифра не перестворюються, тож їхні одноразові анімації
+        // самі більше не запустяться — перемотуємо їх на початок вручну.
+        for(const el of [document.querySelector('.flavor-panel .tag'), indexEl]){
+          if(!el) continue;
+          for(const a of el.getAnimations()){ a.cancel(); a.play(); }
+        }
+
+        // Орби-супутники беруть кадри сусідніх страв, тож гарнір змінюється
+        // разом зі стравою. Раніше тут висіли три сталі картинки, одна з
+        // яких дублювала сусідній слайд, а третя була виноградником.
+        orbs.forEach((img, k) => {
+          const d2 = dishes[(i + k + 1) % dishes.length];
+          if(!d2) return;
+          img.src = d2.flavor;
+          img.alt = '';
+        });
+      }
+ 
+      // Перехід у три такти: шари їдуть геть → вміст підмінюється, поки їх
+      // не видно, і вони стають з протилежного боку → в'їжджають на місце.
+      // Напрямок передається в CSS через --shift, відстань кожен шар бере
+      // свою — звідси паралакс.
+      const OUT = 420, SETTLE = 460;
+
+      // Якщо перехід почався раніше, ніж поява встигла зняти себе за таймером,
+      // знімаємо її негайно — інакше перший паралакс буде без миски й картки.
+      function markReady(){ hero.classList.add('is-ready'); }
+
+      function setTheme(i){
+        hero.classList.remove('theme-1','theme-2','theme-3');
+        hero.classList.add('theme-' + dishes[i].theme);
+      }
+
+      function goTo(i, dir){
+        if(animating) return;
+        markReady();
+        animating = true;
+        const next = (i + dishes.length) % dishes.length;
+        grid.style.setProperty('--shift', dir);
+        setTheme(next);   // колір іде разом із рухом, а не після нього
+
+        grid.classList.add('is-changing');
+
+        setTimeout(() => {
+          current = next;
+          render(current);
+
+          // Ставимо шари з протилежного боку без переходу…
+          grid.classList.remove('is-changing');
+          grid.classList.add('is-entering');
+          // …і лише наступним кадром відпускаємо, інакше браузер злиє
+          // обидва стани в один і в'їзду не буде видно.
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            grid.classList.remove('is-entering');
+            setTimeout(() => { animating = false; }, SETTLE);
+          }));
+        }, OUT);
+      }
+
+      nextBtn.addEventListener('click', () => goTo(current + 1, 1));
+      prevBtn.addEventListener('click', () => goTo(current - 1, -1));
+
+      // --- Міні-сторінка страви -----------------------------------------
+      // Клік по картці героя відкриває саму страву на місці. Раніше він вів
+      // у меню, і людина втрачала з очей те, що щойно бачила; повний список
+      // лишився окремим посиланням усередині аркуша.
+      const sheet = document.getElementById('dishSheet');
+      const sheetImg = document.getElementById('sheetImg');
+      const sheetTitle = document.getElementById('sheetTitle');
+      const sheetDesc = document.getElementById('sheetDesc');
+      const sheetPrice = document.getElementById('sheetPrice');
+      const sheetPlus = document.getElementById('sheetPlus');
+      const sheetAddons = document.getElementById('sheetAddons');
+      const sheetAddonList = document.getElementById('sheetAddonList');
+      const sheetClose = document.getElementById('sheetClose');
+      const sheetAll = document.getElementById('sheetAll');
+      const openLink = document.getElementById('dishOpen');
+      const still = matchMedia('(prefers-reduced-motion: reduce)');
+
+      function fillSheet(d){
+        // Аркуш бере тему своєї страви — глина, слива або кава.
+        sheet.classList.remove('theme-1','theme-2','theme-3');
+        sheet.classList.add('theme-' + d.theme);
+        sheetImg.src = d.plate;
+        sheetImg.alt = d.title;
+        sheetTitle.textContent = d.title;
+        sheetDesc.textContent = d.desc;
+        // Ціну читаємо з картки, а не з d.price: там вона вже підписана
+        // «від N грн» там, де страва має добавки.
+        sheetPrice.textContent =
+          d.card.querySelector('.menu-card__price strong').textContent.trim();
+        sheetPlus.setAttribute('aria-label', 'Додати ' + d.title);
+
+        // Кнопки добавок не свої: клік переадресовується в справжню кнопку
+        // картки меню. Кошик рахує позиції в одному місці, і копія стану
+        // тут не заводиться.
+        const source = [...d.card.querySelectorAll('.addons button')];
+        sheetAddonList.replaceChildren(...source.map(btn => {
+          const li = document.createElement('li');
+          const proxy = document.createElement('button');
+          proxy.type = 'button';
+          proxy.innerHTML = btn.innerHTML;
+          proxy.className = btn.className;
+          proxy.addEventListener('click', () => {
+            btn.click();
+            proxy.className = btn.className;
+          });
+          li.append(proxy);
+          return li;
+        }));
+        sheetAddons.hidden = !source.length;
+        sheetPlus.onclick = () => d.card.querySelector('.plus').click();
+      }
+
+      // Переліт кадру: ім'я вішається на той знімок, що зникає, і на той,
+      // що з'являється, — браузер сам зшиває їх в один рух. Без підтримки
+      // або при вимкненому русі аркуш просто відкривається.
+      function morph(from, to, act){
+        if(!document.startViewTransition || still.matches){ act(); return; }
+        from.style.viewTransitionName = 'dish-photo';
+        const t = document.startViewTransition(() => {
+          from.style.viewTransitionName = '';
+          to.style.viewTransitionName = 'dish-photo';
+          act();
+        });
+        t.finished.finally(() => { to.style.viewTransitionName = ''; });
+      }
+
+      function openSheet(){
+        fillSheet(dishes[current]);
+        morph(flavorImg, sheetImg, () => sheet.showModal());
+      }
+
+      function closeSheet(){
+        morph(sheetImg, flavorImg, () => sheet.close());
+      }
+
+      if(openLink) openLink.addEventListener('click', (e) => {
+        e.preventDefault();   // без JS посилання так і веде в меню
+        openSheet();
+      });
+      sheetClose.addEventListener('click', closeSheet);
+      sheet.addEventListener('cancel', (e) => { e.preventDefault(); closeSheet(); });
+      sheet.addEventListener('click', (e) => { if(e.target === sheet) closeSheet(); });
+
+      // «Дивитись усе меню» веде не просто в меню, а до тієї самої страви:
+      // інакше людина відкриває довгий список і шукає те, що щойно бачила.
+      sheetAll.addEventListener('click', () => {
+        const title = dishes[current].title;
+        sheet.close();
+        // Панель відкриє hashchange; чекаємо на неї, а вже потім ведемо до картки.
+        addEventListener('hashchange', function once(){
+          removeEventListener('hashchange', once);
+          requestAnimationFrame(() => {
+            const card = [...document.querySelectorAll('.menu-card h3')]
+              .find(h => h.textContent.trim() === title)?.closest('.menu-card');
+            if(!card) return;
+            card.scrollIntoView({block: 'center', behavior: 'smooth'});
+            card.classList.add('is-target');
+            setTimeout(() => card.classList.remove('is-target'), 1600);
+          });
+        }, {once: false});
+      });
+
+      // Клавіатура: стрілками гортати природно, і це безкоштовно.
+      hero.addEventListener('keydown', (e) => {
+        if(e.key === 'ArrowRight') goTo(current + 1, 1);
+        else if(e.key === 'ArrowLeft') goTo(current - 1, -1);
+      });
+
+      // Кадри решти страв тягнемо після завантаження сторінки, щоб перше
+      // враження не конкурувало з ними за канал. Раніше це робив блок
+      // .dish-preload у розмітці — і висів під сайтом на 4785 px.
+      function preloadRest(){
+        dishes.slice(1).forEach(d => {
+          [d.plate, d.flavor].forEach(src => { new Image().src = src; });
+        });
+      }
+      if(document.readyState === 'complete') preloadRest();
+      else addEventListener('load', preloadRest, {once: true});
+
+      // Паралакс від курсора. JS віддає лише дві нормалізовані координати,
+      // а наскільки їхати кожному шару — вирішує CSS. Оновлюємо в rAF, щоб
+      // не рахувати стилі частіше, ніж браузер малює.
+      if(matchMedia('(hover: hover) and (pointer: fine)').matches &&
+         !matchMedia('(prefers-reduced-motion: reduce)').matches){
+        let px = 0, py = 0, queued = false;
+        hero.addEventListener('pointermove', (e) => {
+          const r = hero.getBoundingClientRect();
+          px = ((e.clientX - r.left) / r.width - .5) * 2;
+          py = ((e.clientY - r.top) / r.height - .5) * 2;
+          if(queued) return;
+          queued = true;
+          requestAnimationFrame(() => {
+            queued = false;
+            grid.style.setProperty('--mx', px.toFixed(3));
+            grid.style.setProperty('--my', py.toFixed(3));
+          });
+        });
+        // Курсор пішов — композиція спокійно вертається в нуль.
+        hero.addEventListener('pointerleave', () => {
+          grid.style.setProperty('--mx', '0');
+          grid.style.setProperty('--my', '0');
+        });
+      }
+
+      // Найдовша поява — .hero-counter із затримкою .7s і тривалістю .8s.
+      // Після неї знімаємо анімації, щоб їхній forwards-transform не блокував
+      // паралакс. Час беремо з запасом, а не «на око».
+      setTimeout(markReady, 1700);
+
+      render(0);
+    })();
+  </script>
+</body>
+</html>

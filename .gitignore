@@ -1,0 +1,16 @@
+# Робочі знімки й чернетки варіантів — 213 МБ, у репозиторії їм не місце.
+shots/
+preview/
+
+# Журнал роботи та внутрішні нотатки лишаються на диску.
+CLAUDE.md
+CHANGES.md
+HANDOFF.md
+PROMPT.md
+
+# Службове
+__pycache__/
+*.pyc
+Thumbs.db
+desktop.ini
+.DS_Store
