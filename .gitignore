@@ -14,3 +14,7 @@ __pycache__/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Тека для викладення на статичний хост — збирається з index.html,
+# favicon.svg і og.png, у репозиторії не потрібна.
+dist/
