@@ -999,6 +999,42 @@
     /* Під час переходу дрейф не потрібен: два рухи одночасно змазують кадр. */
     .is-changing .orb img,.is-entering .orb img{animation-play-state:paused}
 
+    /* ================= Телефон ================= */
+    /* Власна композиція, а не стиснутий десктоп. На iPhone 15 герой був
+       1291px при вікні 852: перший екран показував лише текст, а тарілка —
+       головне, заради чого сюди приходять — починалась аж під згином.
+       Тут заголовок, кадр і дія вміщуються разом.
+
+       560px, а не 520: найширший iPhone у портреті — 440px (16 Pro Max),
+       плюс запас. */
+    @media (max-width:560px){
+      .hero-grid{padding:20px 0 26px;gap:16px}
+      .hero-copy h1{font-size:clamp(2.4rem,12.5vw,3.4rem);margin:6px 0 12px}
+      .hero-copy p{max-width:32ch;margin:0 auto 16px;font-size:15px}
+      .hours{margin-top:14px}
+      /* Тарілка менша, але лишається головним об'єктом кадру. */
+      .product{width:min(64vw,260px)}
+      /* Орб центрується на своїй точці власним margin — це половина ширини.
+         Міняєш ширину — міняй і margin, інакше кружки зійдуть із кола. */
+      .orb{width:50px;margin:-25px 0 0 -25px}
+      .flavor-panel{padding:14px;column-gap:14px;grid-template-columns:88px 1fr}
+      .flavor-panel h2{font-size:23px}
+
+      /* Посилання внизу мобільного меню були 20px заввишки — пальцем не
+         влучиш. Ціль розтягуємо по висоті, вигляд не чіпаємо. */
+      .nav-overlay-foot a{display:inline-flex;align-items:center;min-height:44px}
+      /* Добавки — головна дрібна моторика на цій сторінці: кнопки були
+         37px, а сам «Добавки» 31px. */
+      .menu-card--reel .addons button{min-height:44px}
+      .menu-card--reel .addons summary{min-height:44px;display:flex;
+        align-items:center}
+
+      /* «Додати» — пігулка, а не еліпс: у базовому правилі стоїть
+         border-radius:50%, і на розтягнутій кнопці 106×51 воно давало
+         справжній овал. */
+      .menu-card--reel .plus{border-radius:999px}
+    }
+
     @media(prefers-reduced-motion:reduce){
       .hero,.product,.flavor-panel,.flavor-image,.orb{transition:none!important}
       /* Дрейф живе на .orb img, а не на .orb — правило лише для .orb його
